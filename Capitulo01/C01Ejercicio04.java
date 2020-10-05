@@ -1,19 +1,19 @@
 public class C01Ejercicio04{
   public static void main(String [] args){
-  System.out.println("\033[35m╔════════════════════════════════════════════════════════════════════╗ ");  
-  System.out.printf("║\033[93m    %-12s %-12s %-12s %-12s %-12s\033[35m║\n", "Lunes", "Martes", "Miercoles", "Jueves", "Viernes");
+  System.out.println("╔════════════════════════════════════════════════════════════════════╗ ");  
+  System.out.printf("║    %-12s %-12s %-12s %-12s %-12s║\n", "Lunes", "Martes", "Miercoles", "Jueves", "Viernes");
   System.out.println("╠════════════════════════════════════════════════════════════════════╣");
-  System.out.printf("║\033[36m    %-12s \033[32m%-12s \033[36m%-12s %-12s \033[32m%-12s\033[35m║\n", "PRO", "SINF", "PRO", "PRO", "SINF");
+  System.out.printf("║    %-12s %-12s %-12s %-12s %-12s║\n", "PRO", "SINF", "PRO", "PRO", "SINF");
   System.out.println("╠════════════════════════════════════════════════════════════════════╣");
-  System.out.printf("║\033[36m    %-12s \033[32m%-12s \033[36m%-12s %-12s \033[32m%-12s\033[35m║\n", "PRO", "SINF", "PRO", "PRO", "SINF");
+  System.out.printf("║    %-12s %-12s %-12s %-12s %-12s║\n", "PRO", "SINF", "PRO", "PRO", "SINF");
   System.out.println("╠════════════════════════════════════════════════════════════════════╣");
-  System.out.printf("║\033[91m    %-12s \033[32m%-12s \033[91m%-12s \033[36m%-12s \033[32m%-12s\033[35m║\n", "BBDD", "SINF", "BBDD", "PRO", "SINF");
+  System.out.printf("║    %-12s %-12s %-12s %-12s %-12s║\n", "BBDD", "SINF", "BBDD", "PRO", "SINF");
   System.out.println("╠════════════════════════════════════════════════════════════════════╣");
-  System.out.printf("║\033[91m    %-12s \033[36m%-12s %-12s \033[91m%-12s %-12s\033[35m║\n", "BBDD", "PRO", "ED", "BBDD", "FOL");
+  System.out.printf("║    %-12s %-12s %-12s %-12s %-12s║\n", "BBDD", "PRO", "ED", "BBDD", "FOL");
   System.out.println("╠════════════════════════════════════════════════════════════════════╣");
-  System.out.printf("║    %-12s %-12s %-12s %-12s %-12s\033[35m║\n", "LM", "LM", "ED", "BBDD", "FOL");
+  System.out.printf("║    %-12s %-12s %-12s %-12s %-12s║\n", "LM", "LM", "ED", "BBDD", "FOL");
   System.out.println("╠════════════════════════════════════════════════════════════════════╣");
-  System.out.printf("║    %-12s %-12s %-12s %-12s %-12s\033[35m║\n", "LM", "LM", "ED", "BBDD", "FOL");
+  System.out.printf("║    %-12s %-12s %-12s %-12s %-12s║\n", "LM", "LM", "ED", "BBDD", "FOL");
   System.out.println("╚════════════════════════════════════════════════════════════════════╝");
   }
 }
