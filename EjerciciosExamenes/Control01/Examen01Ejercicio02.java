@@ -2,6 +2,8 @@ public class Examen01Ejercicio02 {
   public static void main ( String [] args ) {
   int h;
   String orientacion;
+  String primerCaracter;
+  String segundoCaracter;
   System.out.println("Este programa pinta piramides");
   do{
   System.out.print("Introduzca la altura (1-10): ");
@@ -11,11 +13,22 @@ public class Examen01Ejercicio02 {
   while((h > 10) || (h < 1));
   
   do{
-    System.out.println("Introduzca la orientación: izquierda, derecha,
-    arriba, abajo");
+    System.out.println("Introduzca la orientación: izquierda, derecha, arriba, abajo");
     orientacion = System.console().readLine();
-    System.out.println(orientacion);
-  }while(orientacion != "izquierda" || orientacion != "derecha" || orientacion
-  != "arriba" || orientacion != "abajo");
+  }while(!(orientacion.equals("izquierda") || orientacion.equals("derecha") || orientacion.equals("arriba") 
+  || orientacion.equals("abajo")));
+  
+  System.out.println("Introduzca el primer caracter: ");
+  primerCaracter = System.console().readLine();
+  System.out.println(primerCaracter);
+  
+  System.out.println("Introduzca el segundo caracter: ");
+  segundoCaracter = System.console().readLine();
+  System.out.println(segundoCaracter);
+  
+  
+    
+  
+  
 }
 }
