@@ -25,10 +25,14 @@ public class Examen01Ejercicio02 {
   System.out.println("Introduzca el segundo caracter: ");
   segundoCaracter = System.console().readLine();
   System.out.println(segundoCaracter);
-  
-  
-    
-  
-  
+  int reductor = 0;
+  //Introducir un for aquí para hacer las iteraciones de la altura y imprimir cada fila
+  for(int j = 0; j < h;j++){
+  for( int i = h - reductor; i > 0; i--){
+    System.out.print("-");
+  }
+  System.out.print("*\n");
+  reductor++;
+}
 }
 }
