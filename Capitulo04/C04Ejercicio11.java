@@ -14,7 +14,7 @@ public class C04Ejercicio11{
       minutos = Integer.parseInt(System.console().readLine());
     }while(!(minutos >= 0 && minutos < 60));
     result = daySecs - ((horas * 3600) + (minutos * 60));
-    System.out.println(result);
+    System.out.println("Faltan exáctamente " + result + " segundos para que acabe el día");
   }
 }
   
