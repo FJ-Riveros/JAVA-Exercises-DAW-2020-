@@ -6,7 +6,11 @@ public class C04Ejercicio06 {
     System.out.println("Este programa calcula el tiempo de caida de un objeto");
     System.out.println("Introduzca la altura del objeto desde el suelo");
     h = Float.parseFloat(System.console().readLine());
+    if ( h != 0 ){
     resultado = Math.sqrt(((2*h)/ 9.81));
     System.out.printf("%s %.2f %s","El objeto tardará", resultado, "segundos en caer");
+    }else{ 
+      System.out.println("No tiene sentido que la altura sea 0");
+    }
   }
 }
