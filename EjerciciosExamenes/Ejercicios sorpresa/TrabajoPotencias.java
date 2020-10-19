@@ -1,4 +1,4 @@
-public class Random4 {
+public class TrabajoPotencias {
   public static void main (String [] args){
     int result = 0;
     System.out.print("Introduzca el número del que desea averiguar las potencias: ");
@@ -12,7 +12,7 @@ public class Random4 {
       }else{
         result = num * result;
       }
-      System.out.printf(" %1d %1s %d %s %d \n", num,"^", i, "=", result);
+      System.out.printf(" %1d %2s %2d %s %d \n", num,"^", i, "=", result);
     }
   }
 }
