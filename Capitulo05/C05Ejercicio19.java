@@ -1,3 +1,7 @@
+/**
+ * @Author: FJ-Riveros
+ */
+
 public class C05Ejercicio19 {
   public static void main (String [] args){
     System.out.println("Introduzca la altura que desea para la piramide");
