@@ -8,7 +8,7 @@ public class EjercicioRepasoBucles12 {
     String input;
     int count = 0;
     do{
-      System.out.println("Introduzca una palabra( acaba con 'salir'): ");
+      System.out.println("Introduzca una palabra(acaba con 'salir'): ");
       input = System.console().readLine();
       if( !input.equals("salir") ){
         words.add(input);
