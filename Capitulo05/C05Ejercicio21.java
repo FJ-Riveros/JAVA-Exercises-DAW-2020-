@@ -1,3 +1,6 @@
+/**
+ * @Author: FJ-Riveros
+ */
 public class C05Ejercicio21 {
   public static void main (String [] args){
     int countTotal = 0;
