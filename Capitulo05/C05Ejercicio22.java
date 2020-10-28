@@ -3,12 +3,16 @@
  */
 public class C05Ejercicio22 {
   public static void main (String [] args){
+    boolean primo = true;
     for( int i = 2; i <= 100; i++){
+      primo = true;
       for( int j = 2; j < i; j++){
-        if( i % j != 0 && i != j){
-          System.out.println(i);
-          j = i;
+        if( i % j == 0 ){
+          primo = false; 
         }
+      }
+      if( primo == true ){
+        System.out.println(i);
       } 
     }
   }
