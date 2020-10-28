@@ -6,15 +6,20 @@ public class C05Ejercicio26 {
     int digit = Integer.parseInt(System.console().readLine());
     int aux = num;
     int acc = 0;
+    int volt = 0;
     while( aux > 0 ){
       acc++;
       aux /= 10;
     }
     for( int i = 1; i <= acc; i++){
-      if( num % (int)(Math.pow(10, (acc - i) + 1)) == digit){
-        System.out.println("Lo tienes en la posición " + i);
-      }
+      volt = (volt * 10) + (num % 10);
+      num /= 10;
     }
-    //System.out.println(num % (int)Math.pow(10,2));
+    for( int j = 1; j <= acc; j++){
+      if(volt % 10 == digit){
+        System.out.println("El dígito lo tenemos en la posición: " + j);
+      }
+      volt /= 10;
+    }
   }
 }
