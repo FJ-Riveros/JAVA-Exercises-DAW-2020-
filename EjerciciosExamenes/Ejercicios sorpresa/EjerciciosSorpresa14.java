@@ -17,7 +17,6 @@ public class EjerciciosSorpresa14 {
       for( int l = 1; l <= 20 - k; l++){
         System.out.print(" ");
       }
-      
       for( int p = 1; p <= ((i * 2) - 1); p++){
         System.out.print("*");
       }
