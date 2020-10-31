@@ -7,23 +7,30 @@ public class C05Ejercicio34 {
     int num1Reverse = 0;
     int num2Reverse = 0;
     long totalPares = 0;
-    long paresFinal = 0;
+    long totalImpares = 0;
+    int contador = 0;
     while( num2 > 0 ){
-      num2Reverse = num2 % 10;
-      if( num2Reverse % 2 == 0 ){
-        totalPares = (totalPares * 10 ) + num2Reverse;
-      }
-      num2 /= 10;
-      num1Reverse = num1 % 10;
-      if( num1Reverse % 2 == 0 ){
-        totalPares = (totalPares * 10 ) + num1Reverse;
-      }
+      num1Reverse = (num1Reverse * 10) + (num1 % 10);
+      num2Reverse = (num2Reverse * 10) + (num2 % 10);
       num1 /= 10;
+      num2 /= 10;
+      contador++;
     }
-    while( totalPares > 0 ){
-      paresFinal = (paresFinal * 10) + (totalPares % 10);
-      totalPares /= 10; 
+    for( int i = 0; i < contador; i++){
+      if( ((num1Reverse % 10) % 2) == 0 ){
+        totalPares = (totalPares * 10 ) + (num1Reverse % 10);
+      }else{
+        totalImpares = (totalImpares * 10 ) + (num1Reverse % 10);
+      }
+      if( ((num2Reverse % 10) % 2)== 0 ){
+        totalPares = (totalPares * 10 ) + (num2Reverse % 10);
+      }else{
+        totalImpares = (totalImpares * 10 ) + (num2Reverse % 10);
+      }
+      num1Reverse /= 10;
+      num2Reverse /= 10;
     }
-    System.out.println("El número par formado por los números introducidos es: " + paresFinal);
+    System.out.println("El número par formado por los números introducidos es: " + totalPares);
+    System.out.println("El número par formado por los números introducidos es: " + totalImpares);
   }
 }
