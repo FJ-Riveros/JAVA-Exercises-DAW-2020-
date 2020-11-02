@@ -17,7 +17,7 @@ public class C05Ejercicio46 {
             }
           }
         }
-        System.out.println();
+      System.out.println();
       }
     }else{
       System.out.println("Error, los valores mínimos son 2 altura y 2 de anchura");
