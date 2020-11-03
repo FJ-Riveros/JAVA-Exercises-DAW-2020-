@@ -4,14 +4,10 @@ public class C05Ejercicio26 {
     int num = Integer.parseInt(System.console().readLine());
     System.out.print("Introduzca un dígito: ");
     int digit = Integer.parseInt(System.console().readLine());
-    int aux = num;
     int acc = 0;
     int volt = 0;
-    while( aux > 0 ){
+    while( num > 0 ){
       acc++;
-      aux /= 10;
-    }
-    for( int i = 1; i <= acc; i++){
       volt = (volt * 10) + (num % 10);
       num /= 10;
     }
