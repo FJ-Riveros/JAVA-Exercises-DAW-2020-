@@ -4,6 +4,7 @@ public class C05Ejercicio51{
     long num = Long.parseLong(System.console().readLine());
     long aux = num;
     long exp = 0;
+    boolean check = false;
     while( aux > 0 ){
       exp = (exp * 10) + (aux % 10);
       aux /= 10;
@@ -12,9 +13,15 @@ public class C05Ejercicio51{
     while( exp > 0 ){
       if( exp % 10 != 0 && exp % 10 != 8 ){
         aux = (aux * 10) + (exp % 10);
+      }else{
+        check = true;
       }
       exp /= 10;
     }
-    System.out.println(aux);
+    if (check){
+      System.out.println("El número resultante es: " + aux);
+    }else{
+      System.out.println("No se ha comido ningún número");
+    }
   }
 }
