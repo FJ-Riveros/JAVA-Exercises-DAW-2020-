@@ -12,6 +12,5 @@ public class C05Ejercicio52{
     num %= Math.pow(10, counter - 1);
     num = (num * 10) + primero;
     System.out.println(num);
-    
   }
 }
