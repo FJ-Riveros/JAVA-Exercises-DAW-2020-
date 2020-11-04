@@ -31,7 +31,6 @@ public class EjercicioTicketExamen {
         cantDescuento = 0;
     }
     
-    
     for( int i = 0; i < 50; i++){
       System.out.print("-");
     }
