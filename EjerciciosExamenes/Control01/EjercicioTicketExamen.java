@@ -15,7 +15,11 @@ public class EjercicioTicketExamen {
       break;
       
       case 778:
-        cantDescuento = ((20 * price) * 0.05);
+        if( cuant >= 20 ){
+          cantDescuento = ((20 * price) * 0.05);
+        }else{
+          cantDescuento = ((cuant * price) * 0.05);
+        }
       break;
       
       case 219:
