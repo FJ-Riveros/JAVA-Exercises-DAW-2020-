@@ -13,11 +13,14 @@ public class Ex25fjrr2 {
     long aux = num;
     long pares = 0;
     long impares = 0;
+    int countBefore = 0;
+    int countAfter = 0;
     while( aux > 0 ){
       if ( (aux % 10) % 2 != 0 ){
         impares = (impares * 10) + (aux % 10);
       }else{
         pares = (pares * 10) + (aux % 10);
+        countBefore++;
       }
       aux /= 10;
     }
@@ -25,7 +28,11 @@ public class Ex25fjrr2 {
     pares = 0;
     while( aux > 0 ){
       pares = (pares * 10) + (aux % 10);
+      countAfter++;
       aux /= 10;
+    }
+    if( countBefore != countAfter ){
+      pares *= 10;
     }
     System.out.println("Las cifras pares del número " + num + " son: " + pares);
     System.out.println("Las cifras impares del número " + num + " son: " + impares);

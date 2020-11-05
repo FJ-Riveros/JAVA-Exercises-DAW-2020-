@@ -16,7 +16,7 @@ public class Ex25fjrr1 {
       for( int j = 0; j < columns; j++){
         if( i % 2 == 0){
           if( j % 2 == 0 ){
-          System.out.print("██");  
+            System.out.print("██");  
           }else{
             System.out.print("  ");
           }

@@ -11,7 +11,7 @@ public class Ex25fjrr1Extra {
     int rows = 0;
     int columns = 0;
     do{
-      System.out.print("Introduzca el número de filas: ");
+      System.out.print("Introduzca el número de filas (1-20): ");
        rows = Integer.parseInt(System.console().readLine());  
       if(rows <= 0 || rows > 20){
         System.out.print("Valor fuera de rango. ");
@@ -19,7 +19,7 @@ public class Ex25fjrr1Extra {
     }while( rows <= 0 || rows > 20 );
     
     do{
-      System.out.print("Introduzca el número de columnas: ");
+      System.out.print("Introduzca el número de columnas (1-20): ");
       columns = Integer.parseInt(System.console().readLine());  
       if(columns <= 0 || columns > 20){
         System.out.print("Valor fuera de rango. ");
