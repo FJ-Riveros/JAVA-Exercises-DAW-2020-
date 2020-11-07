@@ -1,8 +1,8 @@
 public class C06Ejercicio02 {
   public static void main (String [] args){
-    int paloRandom = (int)((Math.random()*3) + 1);
+    int paloRandom = (int)((Math.random()*4) + 1);
     String result = "";
-    int carta = (int)((Math.random()*12) + 1);
+    int carta = (int)((Math.random()*13) + 1);
         switch (carta){
         case 1:
           result = "A";
