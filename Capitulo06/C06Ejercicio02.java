@@ -3,27 +3,25 @@ public class C06Ejercicio02 {
     int paloRandom = (int)((Math.random()*3) + 1);
     String result = "";
     int carta = (int)((Math.random()*12) + 1);
-    
-    if( carta == 1 || carta < 10 ){
-      switch (carta){
-        
+        switch (carta){
         case 1:
-          result = String.valueOf(carta);
+          result = "A";
         break;
         
         case 11:
-          result = String.valueOf(carta);
+          result = "J";
         break;
         
         case 12:
-          result = String.valueOf(carta);
+          result = "Q";
         break;
         
         case 13:
-          result = String.valueOf(carta);
+          result = "K";
         break;
+        default:
+          result = String.valueOf(carta);
       }  
-    }
     
     switch( paloRandom ){
       case 1:
@@ -41,7 +39,8 @@ public class C06Ejercicio02 {
       case 4:
         result = result + " de tréboles";
       break;
+      default:
     }
-    System.out.println("La carta al azar es : " + result);
+    System.out.println("La carta al azar es: " + result);
   }  
 }
