@@ -13,7 +13,7 @@ public class C06Ejercicio14 {
       else if( guide.equals("menor")){
         randomNum = (int)(Math.random() * (101 - range)) + range;
       }else if( guide.equals("mayor")){
-        randomNum = (int)(Math.random() * (range + 1));
+        randomNum = (int)(Math.random() * (range ) + 1);
       }
       counter++;
       if( counter < 5 ){
