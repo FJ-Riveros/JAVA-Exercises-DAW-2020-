@@ -8,19 +8,13 @@ public class C06Ejercicio08 {
         columnas = 1;
       }
       for( int apuesta = 1; apuesta <= columnas; apuesta++){
-        resultadoPartido = (int)(Math.random() * 3) + 1;
-        switch (resultadoPartido){
-          case 1: 
-            System.out.print("1   |");
-          break;
-          
-          case 2: 
-            System.out.print("   2|");
-          break;
-          
-          case 3: 
-            System.out.print(" X  |");
-          break;
+        resultadoPartido = (int)(Math.random() * 6) + 1;
+        if( resultadoPartido <= 3){
+           System.out.print("1   |");
+        }else if( resultadoPartido == 4 || resultadoPartido == 5 ){
+           System.out.print(" X  |");
+        }else{
+           System.out.print("   2|");
         }
       }
       System.out.println();
