@@ -1,21 +1,20 @@
 public class C06Ejercicio20 {
   public static void main (String [] args){
-    //NO FUNCIONA
     System.out.println("Introduzca la capacidad de la cuba en litros: ");
     int capacity = Integer.parseInt(System.console().readLine());
     int liters = (int)(Math.random() * (capacity + 1));
-    for( int i = 0; i <= capacity; i++){
+    for( int i = 0; i <= capacity ; i++){
       for( int j = 0; j < 6; j++){
-        if( i == capacity){
+        if( i == capacity  ){
           System.out.print("*");
-        }else if ( liters <= (capacity - i) ){
+        }else{
           if( j == 0 || j == 5 ){
             System.out.print("*");
-          }else{
+          }else if( liters > (capacity - i) - 1 ){
             System.out.print("=");
+          }else{
+            System.out.print(" ");
           }
-        }else{
-          System.out.print(" ");
         }
       }
       System.out.println();
