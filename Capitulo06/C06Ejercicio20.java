@@ -19,6 +19,5 @@ public class C06Ejercicio20 {
       }
       System.out.println();
     }
-    System.out.println(liters);
   }
 }
