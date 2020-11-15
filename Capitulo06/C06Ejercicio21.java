@@ -14,6 +14,7 @@ public class C06Ejercicio21 {
         case 2:
           pos += 1;
         break;
+        default:
       }
       for( int i = 0; i < pos; i++){
         System.out.print(" ");
