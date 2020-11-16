@@ -6,14 +6,12 @@ public class C07Ejercicio10 {
     for( int i = 0; i < 20; i++){
       original[i] = (int)(Math.random() * 101);
       if( original[i] % 2 == 0 ){
-        result[counter] = original[i];
-        counter++;
+        result[counter++] = original[i];
       }
     }
     for( int i = 0; i < 20; i++){
       if( original[i] % 2 != 0 ){
-        result[counter] = original[i];
-        counter++;
+        result[counter++] = original[i];
       }
     }
     for( int i = 0; i < 20; i++){
