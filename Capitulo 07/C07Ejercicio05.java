@@ -5,7 +5,7 @@ public class C07Ejercicio05 {
     int min = Integer.MAX_VALUE;
     int[] nums = new int[10];
     for( int i = 0; i < 10; i++){
-      System.out.print("Introduzca un número, le quedan " + (10 - 0) + " números por introducir: ");
+      System.out.print("Introduzca un número, le quedan " + (10 - i) + " números por introducir: ");
       input = Integer.parseInt(System.console().readLine());
       nums[i] = input;
       if( input > max ){
@@ -15,7 +15,13 @@ public class C07Ejercicio05 {
       }
     }
     for( int i = 0; i < 10; i++){
-      System.out.print
+      if( nums[i] == max ){
+        System.out.print(nums[i] + " es el máximo ");
+      } else if ( nums[i] == min ){
+        System.out.print(nums[i] + " es el mínimo ");
+      } else {
+        System.out.print(nums[i] + " ");
+      }
     }
   }
 }
