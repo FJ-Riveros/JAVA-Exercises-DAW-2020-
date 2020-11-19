@@ -1,7 +1,7 @@
 public class C07Ejercicio12 {
   public static void main (String [] args){
-    //NO TERMINADO
     int[] original = new int[10];
+    int[] result = new int[10];
     int inicial = 0;
     int fin = 0;
     for(int i = 0; i < 10; i++){
@@ -16,19 +16,26 @@ public class C07Ejercicio12 {
       System.out.print("Introduzca la posición final(ha de ser mayor que la inicial( " + inicial + " y entre 0-9): ");
       fin = Integer.parseInt(System.console().readLine());
     }while ( fin <= inicial || fin < 0 || fin > 9 );
-    
-    int auxInicial = original[inicial];
     for( int i = 0; i < 10; i++){
-      System.out.print(original[i] + " ");
+      result[i] = original[i];
     }
     int aux = original [9];
-    for( int i = 9; i > 0; i--){
-      original[i] = original[i - 1];
+    result[fin] = original[inicial];
+    for( int i = fin + 1; i < 10; i++){
+      result[i] = original[i - 1];
     }
-    original[0] = aux;
+    result[0] = aux;
+    for( int i = inicial; i > 0; i--){
+      result[i] = original[i - 1];
+    }
     System.out.println();
     for( int i = 0; i < 10; i++){
       System.out.print(original[i] + " ");
+    }
+    System.out.println();
+    System.out.println();
+    for( int i = 0; i < 10; i++){
+      System.out.print(result[i] + " ");
     }
   }
 }
