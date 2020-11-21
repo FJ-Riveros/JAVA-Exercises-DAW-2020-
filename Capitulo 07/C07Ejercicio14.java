@@ -1,18 +1,9 @@
 public class C07Ejercicio14 {
   public static void main (String [] args){
     String[] arr = new String[8];
-    String[] colores = new String [9];
+    String[] colores = {"verde", "rojo", "azul", "amarillo", "naranja", "rosa", "negro", "blanco", "morado"};
     String[] aux = new String[8];
     int counter = 0;
-    colores[0] = "verde";
-    colores[1] = "rojo";
-    colores[2] = "azul";
-    colores[3] = "amarillo";
-    colores[4] = "naranja";
-    colores[5] = "rosa";
-    colores[6] = "negro";
-    colores[7] = "blanco";
-    colores[8] = "morado";
     for(int i = 0; i < 8; i++){
       System.out.print("Introduzca una palabra, le quedan " + (8 - i) + " palabras por introducir: ");
       arr[i] = System.console().readLine();
