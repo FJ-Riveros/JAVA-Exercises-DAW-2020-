@@ -36,16 +36,21 @@ public class C07EjercicioB07 {
       }
       System.out.print("Introduzca la coordenada de la fila(1-4): ");
       int h = Integer.parseInt(System.console().readLine());
+      h--;
       System.out.print("Introduzca la coordenada de la columna(1-5): ");
       int w = Integer.parseInt(System.console().readLine());
-      if( arr[h - 1][w - 1] == "*" ){
+      w--;
+      if( arr[h][w] == "*" ){
         System.out.print("Has tocado una mina, has perdido");
         fin = true;
-      }else if(arr[h - 1][w - 1] == "%"){
+      }else if(arr[h][w] == "%"){
         System.out.print("Has ganado!");
         fin = true;
       }else{
-        arr[h - 1][w - 1] = "▒";
+        /*if(arr[h-1][w] == "*" || arr[h][w-1] == "*" || arr[h+1][w] == "*" || arr[h][w+1] == "*"){
+          System.out.print("¡Cuidado! ¡Hay una mina cerca!");
+        }*/
+        arr[h][w] = "▒";
       }
     }while( fin == false );
   }
