@@ -1,4 +1,4 @@
-public class C07EjercicioB03 {
+public class C07EjercicioB05 {
   public static void main (String [] args){
     //MODIFICAR
     final int ROWS = 6;
@@ -13,15 +13,22 @@ public class C07EjercicioB03 {
         arr[i][j] = (int)(Math.random() * 1001);
         if(arr[i][j] > max){
           max = arr[i][j];
-          maxNum = "El máximo está en la fila " + ((String)i) + " columna " + ((String)j));
+          maxNum = "El máximo está en la fila " + i + " columna " + j;
         }
         if(arr[i][j] < min){
           min = arr[i][j];
-          minNum = "El mínimo está en la fila " + ((String)i) + " columna " + ((String)j));
+          minNum = "El mínimo está en la fila " + i + " columna " + j;
         }
       }
     }
-    System.out.print(max);
-    System.out.print(min);
+    for(int i=0; i<ROWS; i++){
+      for(int j=0; j<COLUMNS; j++){
+        System.out.printf("%5d",arr[i][j]);
+      }
+      System.out.println();
+    }
+    System.out.println();
+    System.out.println(maxNum);
+    System.out.print(minNum);
   }
 }
