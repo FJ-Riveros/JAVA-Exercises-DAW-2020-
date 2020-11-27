@@ -63,7 +63,10 @@ public class C07EjercicioB08 {
     }
     for(int i=0; i<ROWS; i++){
       for(int j=0; j<COLUMNS; j++){
-        if(i == y && j == x){
+        if((Math.abs(i - y) >= 1 && Math.abs(j - x) >= 1)){ //|| (Math.abs(i + y) >= 1 && Math.abs(j + x) >= 1)) {
+          //FINISH
+          System.out.print("  ");
+        }else if(i == y && j == x){
           System.out.print("++");
         }else if(i%2==0){
           if(j%2==0){
