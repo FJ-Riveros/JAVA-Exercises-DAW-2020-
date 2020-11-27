@@ -40,16 +40,25 @@ public class C07EjercicioB07 {
       System.out.print("Introduzca la coordenada de la columna(1-5): ");
       int w = Integer.parseInt(System.console().readLine());
       w--;
-      if( arr[h][w] == "*" ){
-        System.out.print("Has tocado una mina, has perdido");
-        fin = true;
-      }else if(arr[h][w] == "%"){
-        System.out.print("Has ganado!");
+      if( arr[h][w] == "*" || arr[h][w] == "%"){
+        for(int i=0; i<ROWS; i++){
+          for(int j=0; j<COLUMNS; j++){
+            System.out.print(arr[i][j] + " ");
+          }
+          System.out.println();
+          System.out.println();
+        }
+        if( arr[h][w] == "*" ){
+          System.out.print("Has tocado una mina, has perdido");
+        }else{
+          System.out.print("Has ganado!");
+        }
         fin = true;
       }else{
-        /*if(arr[h-1][w] == "*" || arr[h][w-1] == "*" || arr[h+1][w] == "*" || arr[h][w+1] == "*"){
+        if((Math.abs(w - minaX) < 2) && (Math.abs(h - minaY) < 2)){
           System.out.print("¡Cuidado! ¡Hay una mina cerca!");
-        }*/
+          System.out.println();
+        }
         arr[h][w] = "▒";
       }
     }while( fin == false );
