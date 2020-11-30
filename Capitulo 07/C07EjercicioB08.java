@@ -61,10 +61,10 @@ public class C07EjercicioB08 {
         x = 7;
       break;
     }
+    int counter = 0;
     for(int i=0; i<ROWS; i++){
       for(int j=0; j<COLUMNS; j++){
-        if((Math.abs(i - y) >= 1 && Math.abs(j - x) >= 1)){ //|| (Math.abs(i + y) >= 1 && Math.abs(j + x) >= 1)) {
-          //FINISH
+        if(Math.abs(i - y) == Math.abs(j - x) && !(i==y && j==x)){
           System.out.print("  ");
         }else if(i == y && j == x){
           System.out.print("++");
