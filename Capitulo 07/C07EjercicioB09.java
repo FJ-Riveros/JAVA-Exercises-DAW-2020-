@@ -12,7 +12,7 @@ public class C07EjercicioB09{
     
     for(int i=0; i<ROWS; i++){
       for(int j= 0; j<COLUMNS; j++){
-        arrVolteado[j][i] = arr[i][j];
+        arrVolteado[j][11-i] = arr[i][j];
       }
     }
     
