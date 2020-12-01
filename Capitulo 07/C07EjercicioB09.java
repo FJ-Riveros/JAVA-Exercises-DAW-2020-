@@ -22,11 +22,11 @@ public class C07EjercicioB09{
     }
       
       //Right
-      int aux2 = arr[x][11-x]
+      int aux2 = arr[11-x][11-x];
       for(int j=11; j>=1; j--){
         arrVolteado[j][11-x] = arrVolteado[j][(11-x)-1];
       }
-      arrVolteado[x][11-x] = aux2;
+      arrVolteado[x][11-x] = aux1;
       
     
     
