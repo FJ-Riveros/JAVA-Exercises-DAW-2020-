@@ -10,27 +10,23 @@ public class C07EjercicioB09{
       }
     }
     
-    for(int i=0; i<ROWS; i++){
-      for(int j= 0; j<COLUMNS; j++){
-        arrVolteado[j][11-i] = arr[i][j];
+    for(int x=0; x<6; x++){
+      //Top
+      int aux = arr[0][11];
+      for(int j=11; j >= 1; j--){
+        arr[0][j] = arr[0][j-1];
       }
-    }
-    
-    for(int i=0; i<12; i++){
-      for(int j=0; j<12; j++){
-        System.out.printf("%5d",arr[i][j]);
+      
+      //Right
+      for(int j=11; j>=1; j--){
+        
       }
-      System.out.println();
-    }
-    
-      System.out.println();  
-      System.out.println();
-    
-    for(int i=0; i<12; i++){
-      for(int j=0; j<12; j++){
-        System.out.printf("%5d",arrVolteado[i][j]);
-      }
-      System.out.println();
+      
+     
+     
+     
+     
+      
     }
   }
 }
