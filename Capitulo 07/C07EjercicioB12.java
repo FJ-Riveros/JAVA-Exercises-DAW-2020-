@@ -25,7 +25,6 @@ public class C07EjercicioB12 {
       }
       counter++;
     }
-    
     System.out.println("\nEl máximo es: " + max);
     System.out.println("El mínimo es: " + min);
     System.out.println("La media es: " + sum/10);
