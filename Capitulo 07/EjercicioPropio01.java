@@ -31,7 +31,53 @@ public class EjercicioPropio01 {
         }
       }
     }else{
-      System.out.println("Impar");
+      System.out.print("Introduzca la orientación de la pirámide que desea(izq,der,arriba,abajo): ");
+      String orient = System.console().readLine();
+      int modif = input;
+      switch (orient){
+        case "izquierda":
+          System.out.println();
+          for(int i=0;i<input;i++){
+            for(int j=0;j<input;j++){
+              if(j<(modif-input)){
+                arr[i][j]="";
+              }
+            }
+            if(i < (input-1)/2){
+              modif++;
+            }else{
+              modif--;
+            }
+          }
+        break;
+        
+        case "derecha":
+          System.out.println();
+          for(int i=0;i<input;i++){
+            for(int j=0;j<input;j++){
+              if(j>(modif-input)){
+                arr[i][j]="";
+              }
+            }
+            if(i < (input-1)/2){
+              modif++;
+            }else{
+              modif--;
+            }
+          }
+        break;
+        
+        case "arriba":
+          
+        break;
+        
+        case "abajo":
+          
+        break;
+        default:
+        System.out.print("Esa orientación no es válida");
+      }
+      
     }
     for(int i=0;i<input;i++){
       for(int j=0;j<input;j++){
