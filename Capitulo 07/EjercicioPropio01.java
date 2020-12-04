@@ -53,6 +53,7 @@ public class EjercicioPropio01 {
         break;
         
         case "derecha":
+          modif=input;
           for(int i=0;i<input;i++){
             for(int j=0;j<input;j++){
               if(j>(modif-input)){
@@ -69,9 +70,8 @@ public class EjercicioPropio01 {
         
         case "arriba":
           modif = 0;
-          int j = 0;
           for(int i=0;i<input;i++){
-            for(j=0;j<input;j++){
+            for(int j=0;j<input;j++){
               if(j<((input-1)+modif)){
                 if(i < (input-1)/2){
                   arr[j][i]=" ";
@@ -89,11 +89,11 @@ public class EjercicioPropio01 {
         break;
         
         case "abajo":
-          modif = 0;
+          modif = input;
           int j = 0;
           for(int i=0;i<input;i++){
             for(j=0;j<input;j++){
-              if(j<((input-1)+modif)){
+              if(j>(modif-input)){
                 if(i < (input-1)/2){
                   arr[j][i]=" ";
                 }else{
@@ -102,16 +102,15 @@ public class EjercicioPropio01 {
               }
             }
             if(i < (input-1)/2){
-              modif--;
-            }else{
               modif++;
+            }else{
+              modif--;
             }
           }
         break;
         default:
         System.out.print("Esa orientación no es válida");
       }
-      
     }
     for(int i=0;i<input;i++){
       for(int j=0;j<input;j++){
