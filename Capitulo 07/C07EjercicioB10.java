@@ -22,7 +22,11 @@ public class C07EjercicioB10{
           System.out.print("|" + arr[i][j]);
         }
         System.out.print("|");
-        System.out.print("\n├─┼─┼─┤");
+        if(i!=2){
+          System.out.print("\n├─┼─┼─┤");
+        }else{
+          System.out.print("\n└─┴─┴─┘");
+        }
         System.out.println();
       }
       if( counter % 2 == 0){
@@ -62,6 +66,35 @@ public class C07EjercicioB10{
         }
       }//Fin bloque horizontal
       
+      //Check bloque vertical
+      for(int i=0;i<ROWS;i++){
+        winnerCheckX = 0;
+        winnerCheckO = 0;
+        for(int j=0;j<COLUMNS;j++){
+          if(arr[j][i] == "X"){
+            winnerCheckX++;
+          }else if(arr[j][i] == "O"){
+            winnerCheckO++;
+          }
+        }
+        if(winnerCheckX == 3){
+          System.out.println("Has ganado, enhorabuena.");
+          winner = true;
+        }else if(winnerCheckO == 3){
+          System.out.println("El ordenador ha ganado.");
+          winner = true;
+        }
+      }//Fin bloque vertical
+      
+      //Check bloque diagonal
+      if((arr[0][0] == "X" && arr[1][1] == "X" && arr[2][2] == "X") || (arr[0][2] == "X" && arr[1][1] == "X" && arr[2][0] == "X")){
+        System.out.println("Has ganado, enhorabuena.");
+        winner = true;
+      }else if((arr[0][0] == "O" && arr[1][1] == "O" && arr[2][2] == "O") || (arr[0][2] == "O" && arr[1][1] == "O" && arr[2][0] == "O")){
+        System.out.println("Has ganado, enhorabuena.");
+        winner = true;
+      } 
+      //Fin bloque diagonal
       counter++;
     }while(!winner && counter <9);
     
@@ -71,7 +104,12 @@ public class C07EjercicioB10{
           System.out.print("|" + arr[i][j]);
         }
         System.out.print("|");
-        System.out.print("\n├─┼─┼─┤");
+        if(i!=2){
+          System.out.print("\n├─┼─┼─┤");
+        }else{
+          System.out.print("\n└─┴─┴─┘");
+        }
+        
         System.out.println();
       }
   }
