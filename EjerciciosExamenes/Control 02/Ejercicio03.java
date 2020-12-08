@@ -7,6 +7,8 @@ public class Ejercicio03{
     int counter = 0;
     System.out.print("Este programa codifica números enteros en MORSE.\n");
     do{
+      potencia=1;
+      counter=0;
       System.out.print("Introduzca un valor entero a codificar(>=0): ");
       input = Integer.parseInt(System.console().readLine());
       if(input >= 0){
@@ -61,6 +63,7 @@ public class Ejercicio03{
           }
           potencia /= 10;
         }while(potencia >0);
+        System.out.println();
       }
     }while(input >=0);
   }
