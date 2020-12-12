@@ -12,9 +12,11 @@ public class Ejercicio03{
       System.out.print("Introduzca un valor entero a codificar(>=0): ");
       input = Integer.parseInt(System.console().readLine());
       if(input >= 0){
+        int aux3 = input;
+        String prueba = "" + aux3;
+        System.out.println(prueba.charAt(0));
         while(input / potencia > 9){
           potencia *= 10;
-          counter++;
         }
         aux = input;
         do{
