@@ -26,13 +26,15 @@ public class Ex25fjrr2 {
     }
     aux = pares;
     pares = 0;
+    System.out.println(aux);
     while( aux > 0 ){
       pares = (pares * 10) + (aux % 10);
       countAfter++;
       aux /= 10;
     }
-    if( countBefore != countAfter ){
+    while(countBefore != countAfter){
       pares *= 10;
+      countAfter++;
     }
     System.out.println("Las cifras pares del número " + num + " son: " + pares);
     System.out.println("Las cifras impares del número " + num + " son: " + impares);
