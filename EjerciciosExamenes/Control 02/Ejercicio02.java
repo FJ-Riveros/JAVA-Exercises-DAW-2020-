@@ -11,13 +11,12 @@ public class Ejercicio02 {
     }while(num<2);
     long sumAfter=0;
     long sumBefore=0;
+    long aux=0;
     long center=2;
     for(long x=2; x<num; x++){
       sumAfter=0;
-      sumBefore=0;
-      for(long i=1; i<x; i++){
-        sumBefore+=i;
-      }
+      aux++;
+      sumBefore+= aux;
       for(long j=x+1; j<num; j++){
         sumAfter+=j;
         if(sumAfter==sumBefore){
