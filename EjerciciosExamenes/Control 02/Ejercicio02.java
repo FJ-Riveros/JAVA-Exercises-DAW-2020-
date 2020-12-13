@@ -11,17 +11,17 @@ public class Ejercicio02 {
     }while(num<2);
     long sumAfter=0;
     long sumBefore=0;
-    long aux=0;
-    long center=2;
+    long sum=4;
     for(long x=2; x<num; x++){
-      sumAfter=0;
-      aux++;
-      sumBefore+= aux;
-      for(long j=x+1; j<num; j++){
-        sumAfter+=j;
-        if(sumAfter==sumBefore){
-          System.out.println("Centro numérico: " + x);
-        }
+      sumBefore+= x-1;
+      sumAfter=x+1;
+      sum=sumAfter+1;
+      while(sumAfter < sumBefore){
+        sumAfter+= sum;
+        sum++;
+      }
+      if(sumAfter==sumBefore){
+        System.out.println("Centro numérico: " + x);
       }
     }
   }
