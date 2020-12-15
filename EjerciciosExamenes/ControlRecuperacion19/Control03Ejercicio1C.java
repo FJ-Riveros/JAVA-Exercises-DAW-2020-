@@ -4,9 +4,9 @@ public class Control03Ejercicio1C {
     final int ROWS = Integer.parseInt(System.console().readLine());
     System.out.print("Introduzca el nº de columnas: ");
     final int COLUMNS = Integer.parseInt(System.console().readLine());
-    System.out.print("Introduzca el nº de fila central (entre 0 y " + (ROWS - 1) + ": ");
+    System.out.print("Introduzca el nº de fila central (entre 0 y " + (ROWS - 1) + "): ");
     final int Y = Integer.parseInt(System.console().readLine());
-    System.out.print("Introduzca el nº de fila central (entre 0 y " + (COLUMNS - 1) + ": ");
+    System.out.print("Introduzca el nº de columna central (entre 0 y " + (COLUMNS - 1) + "): ");
     final int X = Integer.parseInt(System.console().readLine());
     int[][] arr = new int[ROWS][COLUMNS];
     int difY = 0;
@@ -25,7 +25,7 @@ public class Control03Ejercicio1C {
     }
     for(int i = 0; i < ROWS; i++){
       for(int j = 0; j < COLUMNS; j++){
-        System.out.printf("%3d ",arr[i][j]);
+        System.out.printf("%2d ",arr[i][j]);
       }
       System.out.println();
     }
