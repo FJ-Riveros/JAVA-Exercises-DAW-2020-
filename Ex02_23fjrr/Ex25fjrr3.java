@@ -18,12 +18,18 @@ public class Ex25fjrr3 {
     final int rangoMin = Integer.parseInt(System.console().readLine());
     if((ROWS >= 1 && ROWS <= 10) && (COLUMNS >= 1 && COLUMNS <= 15)
         && (rangoMax >= 1 && rangoMax <= 999) && (rangoMax >= 1 && rangoMax <= 999)){
-           
       int [][] arr = new int[ROWS][COLUMNS];
       for(int i=0; i<ROWS; i++){
-        for(int j=0; i<COLUMNS; j++){
-          arr[i][j] = (int)(Math.random()*(rangoMax-rangoMin+1))+rangoMin;
+        for(int j=0; j<COLUMNS; j++){
+          arr[i][j] = (int)(Math.random()*((rangoMax-rangoMin)+1))+rangoMin;
         }
+      }
+      System.out.println();
+      for(int i=0; i<ROWS; i++){
+        for(int j=0; j<COLUMNS; j++){
+          System.out.printf("%4d", arr[i][j]);
+        }
+        System.out.println();
       }
     }
   }
