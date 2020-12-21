@@ -22,7 +22,7 @@ public class Ex25fjrr1 {
         x = input.charAt(0) - 'a';
         guion = input.charAt(1) - '-';
         y = input.charAt(2) - '1';
-        if( (x >= 0 && x <= 7) && (guion == 0) && (y >= 0 && y <= 8)){
+        if((x >= 0 && x <= 7) && (guion == 0) && (y >= 0 && y <= 8)){
           check = true;
         }
       }else{
