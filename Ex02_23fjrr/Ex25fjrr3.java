@@ -31,6 +31,34 @@ public class Ex25fjrr3 {
         }
         System.out.println();
       }
+      System.out.println();
+      System.out.print("A continuación, se señalan los picos (^) y los valles (v):\n");
+      int minValue,maxValue;
+      for(int i=0; i<ROWS; i++){
+        for(int j=0; j<COLUMNS; j++){
+          minValue = Integer.MAX_VALUE;
+          maxValue = Integer.MIN_VALUE;
+          for(int k=i-1; k<=i+1; k++){
+            for(int l=j-1; l<=j+1; l++){
+              if((k>=0 && k<ROWS) && (l>=0 && l<COLUMNS)){
+                if(arr[k][l] > maxValue){
+                  maxValue = arr[k][l];
+                }else if(arr[k][l] < minValue){
+                  minValue = arr[k][l];
+                }
+              }
+            } 
+          }
+          if(arr[i][j] == minValue){
+            System.out.print(" v |");
+          }else if(arr[i][j] == maxValue){
+            System.out.print(" ^ |");
+          }else{
+            System.out.print("   |");
+          }
+        }
+        System.out.println(); 
+      }
     }
   }
 }
