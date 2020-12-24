@@ -70,5 +70,18 @@ public class OperacionesEnteros{
       return false;
     }
   }
+  
+  public static int posicionDeDigito(long x, int digitoDeseado){
+    x = volteado(x);
+    int dig = digitos(x);
+    for(int i=0; i<dig; i++){
+      if(digitoDeseado == x%10){
+        return i;
+      }
+      x /= 10;
+    }
+    return -1;
+  }
+  
 }
 
