@@ -50,5 +50,17 @@ public class OperacionesEnteros{
     }
     return volteado;
   }
+  
+  public static int digitoN(long x, int pos){
+    int digit = 0;
+    x = volteado(x);
+    for(int i=0; i<=pos; i++){
+      if(i == pos-1 || i == pos){
+        digit = (int)x%10;
+      }
+      x /= 10;
+    }
+    return digit;
+  }
 }
 
