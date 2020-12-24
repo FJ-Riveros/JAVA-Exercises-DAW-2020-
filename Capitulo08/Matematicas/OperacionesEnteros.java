@@ -42,5 +42,13 @@ public class OperacionesEnteros{
     return counter;
   }
   
+  public static long volteado(long x){
+    long volteado = 0;
+    while(x > 0){
+      volteado = (volteado*10) + (x%10);
+      x /= 10;
+    }
+    return volteado;
+  }
 }
 
