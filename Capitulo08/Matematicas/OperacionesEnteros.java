@@ -62,5 +62,13 @@ public class OperacionesEnteros{
     }
     return digit;
   }
+  
+  public static boolean esCapicua(long x){
+    if(volteado(x) == x){
+      return true;
+    }else{
+      return false;
+    }
+  }
 }
 

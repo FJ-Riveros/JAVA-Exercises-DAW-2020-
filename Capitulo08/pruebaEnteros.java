@@ -3,8 +3,6 @@ public class pruebaEnteros{
 public static void main(String [] args){
     System.out.print("Introduzca un número :" );
     int num = Integer.parseInt(System.console().readLine());
-    System.out.print("Introduzca la posicion :" );
-    int pos = Integer.parseInt(System.console().readLine());
-    System.out.println("Los digitos que tiene son " + Matematicas.OperacionesEnteros.digitoN(num,pos));
+    System.out.println("Los digitos que tiene son " + Matematicas.OperacionesEnteros.esCapicua(num));
   }
 }
