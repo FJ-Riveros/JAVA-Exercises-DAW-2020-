@@ -21,11 +21,10 @@ public class OperacionesEnteros{
   }
   
   public static int potencia(int base, int exponente){
+    int aux = base;
     if(exponente != 0){
-      for(int i=1; i<=exponente; i++){
-        if(i!=1){
-          base *= base;
-        }
+      for(int i=1; i<exponente; i++){
+        base = base * aux;
       } 
       return base;
     }else{
@@ -83,5 +82,13 @@ public class OperacionesEnteros{
     return -1;
   }
   
+  public static long quitaPorDetras(long x, int digitosQuitar){
+    System.out.print(potencia(10, digitosQuitar));
+    return x/(potencia(10, digitosQuitar));
+  }
+  
+  public static long quitaPorDelante(long x, int digitosQuitar){    
+    return x%(potencia(10, digitosQuitar));
+  }
 }
 
