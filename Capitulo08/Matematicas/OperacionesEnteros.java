@@ -19,5 +19,19 @@ public class OperacionesEnteros{
     }while(!check);
     return x;
   }
+  
+  public static int potencia(int base, int exponente){
+    if(exponente != 0){
+      for(int i=1; i<=exponente; i++){
+        if(i!=1){
+          base *= base;
+        }
+      } 
+      return base;
+    }else{
+      return 1;
+    }
+  }
+  
 }
 
