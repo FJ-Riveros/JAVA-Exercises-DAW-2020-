@@ -33,5 +33,14 @@ public class OperacionesEnteros{
     }
   }
   
+  public static int digitos(long x){
+    int counter = 0;
+    while(x >0){
+      counter++;
+      x /= 10;
+    }
+    return counter;
+  }
+  
 }
 
