@@ -91,16 +91,16 @@ public class OperacionesEnteros{
   }
   
   public static long trozoDeNumero(long x, int posEmpieza, int posTermina){
-    int prueba = digitos(x);
-    long build = 0;
-    long volt = volteado(x);
-    for(int i=0; i < prueba; i++){
+    int digitosTotales = digitos(x);
+    long result = 0;
+    x = volteado(x);
+    for(int i=0; i < digitosTotales; i++){
       if( i >= posEmpieza && i<= posTermina ){
-        build = (build * 10) + (volt%10); 
+        result = (result * 10) + (x%10); 
       } 
-      volt/=10;
+      x/=10;
     }
-    return build;
+    return result;
   }
 }
 
