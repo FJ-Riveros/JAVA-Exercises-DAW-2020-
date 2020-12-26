@@ -102,5 +102,9 @@ public class OperacionesEnteros{
     }
     return result;
   }
+  
+  public static long juntaNumeros(long x, long y){
+    return (x * potencia(10,digitos(y))) + y;
+  }
 }
 
