@@ -75,7 +75,6 @@ public class OperacionesEnteros{
   }
   
   public static long quitaPorDetras(long x, int digitosQuitar){
-    System.out.print(potencia(10, digitosQuitar));
     return x/(potencia(10, digitosQuitar));
   }
   
@@ -91,5 +90,17 @@ public class OperacionesEnteros{
     return (digitoAdd * potencia(10, digitos(x))) + x;
   }
   
+  public static long trozoDeNumero(long x, int posEmpieza, int posTermina){
+    int prueba = digitos(x);
+    long build = 0;
+    long volt = volteado(x);
+    for(int i=0; i < prueba; i++){
+      if( i >= posEmpieza && i<= posTermina ){
+        build = (build * 10) + (volt%10); 
+      } 
+      volt/=10;
+    }
+    return build;
+  }
 }
 
