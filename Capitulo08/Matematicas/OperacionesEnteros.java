@@ -51,15 +51,7 @@ public class OperacionesEnteros{
   }
   
   public static int digitoN(long x, int pos){
-    int digit = 0;
-    x = volteado(x);
-    for(int i=0; i<=pos; i++){
-      if(i == pos-1 || i == pos){
-        digit = (int)x%10;
-      }
-      x /= 10;
-    }
-    return digit;
+    return (int)((volteado(x) / potencia(10, pos))%10);
   }
   
   public static boolean esCapicua(long x){
