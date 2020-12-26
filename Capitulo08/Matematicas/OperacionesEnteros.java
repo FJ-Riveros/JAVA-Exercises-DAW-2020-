@@ -90,5 +90,14 @@ public class OperacionesEnteros{
   public static long quitaPorDelante(long x, int digitosQuitar){    
     return x%(potencia(10, (digitos(x)-digitosQuitar)));
   }
+  
+  public static long pegaPorDetras(long x, int digitoAdd){
+    return (x*10) + digitoAdd;
+  }
+  
+  public static long pegaPorDelante(long x, int digitoAdd){
+    return (digitoAdd * potencia(10, digitos(x))) + x;
+  }
+  
 }
 
