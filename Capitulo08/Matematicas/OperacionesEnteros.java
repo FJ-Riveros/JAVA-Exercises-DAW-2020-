@@ -88,8 +88,7 @@ public class OperacionesEnteros{
   }
   
   public static long quitaPorDelante(long x, int digitosQuitar){    
-    //Arreglar
-    return x%(potencia(10, digitosQuitar));
+    return x%(potencia(10, (digitos(x)-digitosQuitar)));
   }
 }
 
