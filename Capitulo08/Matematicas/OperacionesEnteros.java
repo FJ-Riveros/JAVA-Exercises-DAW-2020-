@@ -106,5 +106,19 @@ public class OperacionesEnteros{
   public static long juntaNumeros(long x, long y){
     return (x * potencia(10,digitos(y))) + y;
   }
+  
+  public static long conversorBinarioDecimal(long x){
+    int digits = Matematicas.OperacionesEnteros.digitos(x);
+    int multiplicador = 1;
+    int result = 0;
+    for(int i = 0; i < digits; i++){
+      if(x%10 == 1){
+        result += multiplicador;
+      }
+      multiplicador *= 2;
+      x /= 10;
+    }
+    return result;
+  }
 }
 
