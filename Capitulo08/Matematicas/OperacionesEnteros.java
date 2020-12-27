@@ -120,5 +120,29 @@ public class OperacionesEnteros{
     }
     return result;
   }
+  
+  public static long conversorDecimalBinario(long x){
+    int counter = 0;
+    int bits = 0;
+    int restaCiclica = 0;
+    int result = 0;
+    while(bits < x){
+      bits = Matematicas.OperacionesEnteros.potencia(2, counter);
+      if(bits < x){
+        counter++;
+      }
+    }
+    for(int i=counter; i>=0; i--){
+      restaCiclica = Matematicas.OperacionesEnteros.potencia(2, i);
+      if(x - restaCiclica >=0){
+      x -= restaCiclica;
+      result = (result * 10) + 1;
+      }else{
+        result *= 10;
+      }
+    }
+    return result;
+  }
+  
 }
 
