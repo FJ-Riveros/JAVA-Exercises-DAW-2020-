@@ -121,7 +121,7 @@ public class OperacionesEnteros{
     return result;
   }
   
-  public static long conversorDecimalBinario(long x){
+  public static long conversorDecimalBinarioLento(long x){
     int counter = 0;
     int bits = 0;
     int restaCiclica = 0;
@@ -144,5 +144,19 @@ public class OperacionesEnteros{
     return result;
   }
   
+  public static long conversorDecimalBinarioRapido(long x){
+    if(x == 0){
+      return 0;
+    }
+    long result = 1;
+    while(x > 1){
+      result = Matematicas.OperacionesEnteros.pegaPorDetras(result, (int)x%2);
+      x /= 2;
+    }
+    result = Matematicas.OperacionesEnteros.pegaPorDetras(result, 1);
+    result = Matematicas.OperacionesEnteros.volteado(result);
+    result = Matematicas.OperacionesEnteros.quitaPorDetras(result, 1);
+    return result;
+  }
 }
 
