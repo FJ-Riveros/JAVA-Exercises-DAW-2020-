@@ -19,10 +19,50 @@ public class C08Ejercicio19{
     String input = System.console().readLine();
     switch ( conversion ){
       case 1:
-        System.out.println(input);
+        System.out.print(Matematicas.ConversorDeSistemas.conversorDecimalBinarioLento(Long.parseLong(input)));
       break;
       
       case 2:
+      
+      break;
+      
+      case 3:
+      
+      break;
+      
+      case 4:
+        System.out.print(Matematicas.ConversorDeSistemas.conversorBinarioDecimal(Long.parseLong(input)));
+      break;
+      
+      case 5:
+      
+      break;
+      
+      case 6:
+      
+      break;
+      
+      case 7:
+      
+      break;
+      
+      case 8:
+      
+      break;
+      
+      case 9:
+      
+      break;
+      
+      case 10:
+      
+      break;
+      
+      case 11:
+      
+      break;
+      
+      case 12:
       
       break;
     }

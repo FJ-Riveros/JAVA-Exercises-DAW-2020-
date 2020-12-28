@@ -1,5 +1,9 @@
-package Matematicas;
-  public class ConversorDeSistemas{
+  package Matematicas;
+  import Matematicas.OperacionesEnteros;
+  //////////////////////////////////////////////////////////////////////////////
+  /*                                 Conversor de Sistemas                    */
+  //////////////////////////////////////////////////////////////////////////////
+  public class ConversorDeSistemas{ 
   /*
    * Traducimos un número binario en decimal.
    * @param x               número en binario a convertir
@@ -67,4 +71,12 @@ package Matematicas;
     return result;
   }
   
+  /*
+   * Traducimos un número decimal en octal(forma rápida).
+   * @param x               número en decimal a convertir a octal
+   * @return                long en traducido a octal
+  */
+  public static long conversorDecimalOctalRapido(long x){
+    //Terminar
+  }
 }
