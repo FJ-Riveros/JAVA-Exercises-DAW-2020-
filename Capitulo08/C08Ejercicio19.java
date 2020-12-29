@@ -66,11 +66,13 @@ public class C08Ejercicio19{
       break;
       
       case 11:
-      
+        resultNoHexa = Matematicas.ConversorDeSistemas.conversorHexadecimalDecimal(input);
+        resultNoHexa = Matematicas.ConversorDeSistemas.conversorDecimalBinarioRapido(resultNoHexa);
       break;
       
       case 12:
-      
+        resultNoHexa = Matematicas.ConversorDeSistemas.conversorHexadecimalDecimal(input);
+        resultNoHexa = Matematicas.ConversorDeSistemas.conversorDecimalOctal(resultNoHexa);
       break;
       default:
     }
