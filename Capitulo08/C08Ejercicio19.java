@@ -19,6 +19,7 @@ public class C08Ejercicio19{
     String input = System.console().readLine();
     String resultHexa = "";
     long resultNoHexa = 0;
+    long helper = 0;
     switch ( conversion ){
       case 1:
         resultNoHexa = Matematicas.ConversorDeSistemas.conversorDecimalBinarioLento(Long.parseLong(input));
@@ -33,32 +34,35 @@ public class C08Ejercicio19{
       break;
       
       case 4:
-      //Problema
-        System.out.print(Matematicas.ConversorDeSistemas.conversorBinarioDecimal(Long.parseLong(input)));
+        resultNoHexa = Matematicas.ConversorDeSistemas.conversorBinarioDecimal(Long.parseLong(input));
       break;
       
       case 5:
-      
+        resultNoHexa = Matematicas.ConversorDeSistemas.conversorBinarioDecimal(Long.parseLong(input));
+        resultNoHexa = Matematicas.ConversorDeSistemas.conversorDecimalOctal(resultNoHexa);
       break;
       
       case 6:
-      
+        helper = Matematicas.ConversorDeSistemas.conversorBinarioDecimal(Long.parseLong(input));
+        resultHexa = Matematicas.ConversorDeSistemas.conversorDecimalHexadecimal(helper);
       break;
       
       case 7:
-      
+        resultNoHexa = Matematicas.ConversorDeSistemas.conversorOctalDecimal(Long.parseLong(input));
       break;
       
       case 8:
-      
+        resultNoHexa = Matematicas.ConversorDeSistemas.conversorOctalDecimal(Long.parseLong(input));
+        resultNoHexa = Matematicas.ConversorDeSistemas.conversorDecimalBinarioLento(resultNoHexa);
       break;
       
       case 9:
-      
+        helper = Matematicas.ConversorDeSistemas.conversorOctalDecimal(Long.parseLong(input));
+        resultHexa = Matematicas.ConversorDeSistemas.conversorDecimalHexadecimal(helper);
       break;
       
       case 10:
-      
+        resultNoHexa = Matematicas.ConversorDeSistemas.conversorHexadecimalDecimal(input);
       break;
       
       case 11:
