@@ -162,32 +162,10 @@
     int exponente = 0;
     for(int i=digits-1; i >= 0; i--){
       filter = x.charAt(i);
-      switch(filter){
-        case 'A':
-          add = 10;
-        break;
-        
-        case 'B':
-          add = 11;
-        break;
-        
-        case 'C':
-          add = 12;
-        break;
-        
-        case 'D':
-          add = 13;
-        break;
-        
-        case 'E':
-          add = 14;
-        break;
-        
-        case 'F':
-          add = 15;
-        break;
-        default: 
-          add = filter - '0';
+      if(filter - 'A' >= 0 && filter - 'A' <= 5){
+        add = 10 + (filter - 'A');
+      }else{
+        add = filter - '0';
       }
       result += add * (Matematicas.OperacionesEnteros.potencia(16, exponente++));
     }
