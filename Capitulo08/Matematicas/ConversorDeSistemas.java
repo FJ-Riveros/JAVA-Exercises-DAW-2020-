@@ -154,13 +154,42 @@
    * @param x               String en hexadecimal a convertir a decimal
    * @return                long, String hexadecimal convertido a decimal
   */
-  public static long conversorHexadecimal a decimal(String x){
-    int digits = Matematicas.OperacionesEnteros.digitos(x);
-    int exponente = 0;
+  public static long conversorHexadecimalDecimal(String x){
+    int digits = x.length();
     int result = 0;
-    for(int i = 0; i < digits; i++){
-      result += (x%10) * Matematicas.OperacionesEnteros.potencia(8, exponente++);
-      x /= 10;
+    char filter = 0;
+    int add = 0;
+    int exponente = 0;
+    for(int i=digits-1; i >= 0; i--){
+      filter = x.charAt(i);
+      switch(filter){
+        case 'A':
+          add = 10;
+        break;
+        
+        case 'B':
+          add = 11;
+        break;
+        
+        case 'C':
+          add = 12;
+        break;
+        
+        case 'D':
+          add = 13;
+        break;
+        
+        case 'E':
+          add = 14;
+        break;
+        
+        case 'F':
+          add = 15;
+        break;
+        default: 
+          add = filter - '0';
+      }
+      result += add * (Matematicas.OperacionesEnteros.potencia(16, exponente++));
     }
     return result;
   }
