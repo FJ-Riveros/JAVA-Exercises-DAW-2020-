@@ -17,20 +17,23 @@ public class C08Ejercicio19{
     int conversion = Integer.parseInt(System.console().readLine());
     System.out.println("Ahora introduzca el número a convertir: ");
     String input = System.console().readLine();
+    String resultHexa = "";
+    long resultNoHexa = 0;
     switch ( conversion ){
       case 1:
-        System.out.print(Matematicas.ConversorDeSistemas.conversorDecimalBinarioLento(Long.parseLong(input)));
+        resultNoHexa = Matematicas.ConversorDeSistemas.conversorDecimalBinarioLento(Long.parseLong(input));
       break;
       
       case 2:
-      
+        resultNoHexa = Matematicas.ConversorDeSistemas.conversorDecimalOctal(Long.parseLong(input));
       break;
       
       case 3:
-      
+        resultHexa = Matematicas.ConversorDeSistemas.conversorDecimalHexadecimal(Long.parseLong(input));
       break;
       
       case 4:
+      //Problema
         System.out.print(Matematicas.ConversorDeSistemas.conversorBinarioDecimal(Long.parseLong(input)));
       break;
       
@@ -65,6 +68,12 @@ public class C08Ejercicio19{
       case 12:
       
       break;
+      default:
+    }
+    if(conversion == 3 || conversion == 6 || conversion == 9 ){
+      System.out.println(resultHexa);
+    }else{
+      System.out.println(resultNoHexa);
     }
   }
 }
