@@ -77,6 +77,13 @@
    * @return                long en traducido a octal
   */
   public static long conversorDecimalOctalRapido(long x){
-    //Terminar
+    long result = 1;
+    while(x >= 1){
+      result = Matematicas.OperacionesEnteros.pegaPorDetras(result,(int)x%8);
+      x/= 8;
+    }
+    result = Matematicas.OperacionesEnteros.volteado(result);
+    result = Matematicas.OperacionesEnteros.quitaPorDetras(result, 1);
+    return result;
   }
 }
