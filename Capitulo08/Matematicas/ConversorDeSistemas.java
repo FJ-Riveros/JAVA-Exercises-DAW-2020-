@@ -76,7 +76,7 @@
    * @param x               número en decimal a convertir a octal
    * @return                long en traducido a octal
   */
-  public static long conversorDecimalOctalRapido(long x){
+  public static long conversorDecimalOctal(long x){
     long result = 1;
     while(x >= 1){
       result = Matematicas.OperacionesEnteros.pegaPorDetras(result,(int)x%8);
@@ -84,6 +84,47 @@
     }
     result = Matematicas.OperacionesEnteros.volteado(result);
     result = Matematicas.OperacionesEnteros.quitaPorDetras(result, 1);
+    return result;
+  }
+  
+  public static String conversorDecimalHexadecimal(long x){
+    String add = "";
+    String result = "";
+    if(x == 0){
+      return "0";
+    }
+    while(x >= 1){
+      add = "";
+      switch((int)x%16){
+        case 10:
+          add = "A";  
+        break;
+        
+        case 11:
+          add = "B";  
+        break;
+        
+        case 12:
+          add = "C";  
+        break;
+        
+        case 13:
+          add = "D";  
+        break;
+        
+        case 14:
+          add = "E";  
+        break;
+        
+        case 15:
+          add = "F";  
+        break;
+        default:
+          add = "" + x%16;
+      }
+      result = add + result;
+      x/= 16;
+    }
     return result;
   }
 }
