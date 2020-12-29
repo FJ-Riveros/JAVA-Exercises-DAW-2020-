@@ -74,7 +74,7 @@
   /*
    * Traducimos un número decimal en octal(forma rápida).
    * @param x               número en decimal a convertir a octal
-   * @return                long en traducido a octal
+   * @return                long traducido a octal
   */
   public static long conversorDecimalOctal(long x){
     long result = 1;
@@ -87,6 +87,11 @@
     return result;
   }
   
+  /*
+   * Traducimos un número decimal en Hexadecimal.
+   * @param x               número en decimal a convertir a Hexadecimal
+   * @return                String, número convertido a Hexadecimal
+  */
   public static String conversorDecimalHexadecimal(long x){
     String add = "";
     String result = "";
