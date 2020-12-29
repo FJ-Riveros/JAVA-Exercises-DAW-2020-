@@ -5,6 +5,6 @@ public static void main(String [] args){
     int num = Integer.parseInt(System.console().readLine());
     /*System.out.print("Introduzca el digito a buscar :" );
     int empieza = Integer.parseInt(System.console().readLine());*/
-    System.out.println("Los digitos que tiene son " + Matematicas.ConversorDeSistemas.conversorDecimalHexadecimal(num));
+    System.out.println("Los digitos que tiene son " + Matematicas.ConversorDeSistemas.conversorOctalDecimal(num));
   }
 }

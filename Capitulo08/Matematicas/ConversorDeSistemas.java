@@ -132,4 +132,36 @@
     }
     return result;
   }
+  
+  /*
+   * Traducimos un número octal a decimal.
+   * @param x               número en octal a convertir a decimal
+   * @return                long, número octal convertido a decimal
+  */
+  public static long conversorOctalDecimal(long x){
+    int digits = Matematicas.OperacionesEnteros.digitos(x);
+    int exponente = 0;
+    int result = 0;
+    for(int i = 0; i < digits; i++){
+      result += (x%10) * Matematicas.OperacionesEnteros.potencia(8, exponente++);
+      x /= 10;
+    }
+    return result;
+  }
+  
+  /*
+   * Traducimos un número hexadecimal a decimal.
+   * @param x               String en hexadecimal a convertir a decimal
+   * @return                long, String hexadecimal convertido a decimal
+  */
+  public static long conversorHexadecimal a decimal(String x){
+    int digits = Matematicas.OperacionesEnteros.digitos(x);
+    int exponente = 0;
+    int result = 0;
+    for(int i = 0; i < digits; i++){
+      result += (x%10) * Matematicas.OperacionesEnteros.potencia(8, exponente++);
+      x /= 10;
+    }
+    return result;
+  }
 }
