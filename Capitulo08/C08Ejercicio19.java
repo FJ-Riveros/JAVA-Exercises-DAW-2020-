@@ -66,9 +66,8 @@ public class C08Ejercicio19{
       break;
       
       case 11:
-      //Ver por qué el lento no funciona
         resultNoHexa = Matematicas.ConversorDeSistemas.conversorHexadecimalDecimal(input);
-        resultNoHexa = Matematicas.ConversorDeSistemas.conversorDecimalBinarioRapido(resultNoHexa);
+        resultNoHexa = Matematicas.ConversorDeSistemas.conversorDecimalBinarioLento(resultNoHexa);
       break;
       
       case 12:

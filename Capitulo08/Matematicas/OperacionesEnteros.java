@@ -37,13 +37,14 @@ public class OperacionesEnteros{
    * @param exponente   exponente de la operación
    * @return            número entero, resultado de la potencia
    */
-  public static int potencia(int base, int exponente){
+  public static long potencia(int base, int exponente){
     int aux = base;
+    long result = (long)base;
     if(exponente != 0){
       for(int i=1; i<exponente; i++){
-        base = base * aux;
+        result = result * aux;
       } 
-      return base;
+      return result;
     }else{
       return 1;
     }
@@ -217,9 +218,9 @@ public class OperacionesEnteros{
   */
   public static long conversorDecimalBinarioLento(long x){
     int counter = 0;
-    int bits = 0;
-    int restaCiclica = 0;
-    int result = 0;
+    long bits = 0;
+    long restaCiclica = 0;
+    long result = 0;
     while(bits < x){
       bits = Matematicas.OperacionesEnteros.potencia(2, counter);
       if(bits < x){
