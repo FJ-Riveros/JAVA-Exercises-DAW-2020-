@@ -7,4 +7,14 @@ public class ManipulacionArraysUnidimensionales {
     }
     return arr;
   }
+  
+  public static long  minimoArrayInt (int[]arr){
+    long min = Long.MAX_VALUE;
+    for(int i=0; i<arr.length; i++){
+      if(min > arr[i]){
+        min = arr[i];
+        } 
+    }
+    return min;
+  }
 }
