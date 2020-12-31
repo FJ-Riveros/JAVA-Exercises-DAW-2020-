@@ -7,13 +7,17 @@ public static void main(String [] args){
     //int num = Integer.parseInt(System.console().readLine());
     //int exponente = Integer.parseInt(System.console().readLine());
     //System.out.println("Los digitos que tiene son " + Matematicas.OperacionesEnteros.potencia(num, exponente));
-    int[] prueba = new int[20];
+    int[] prueba = new int[1];
     for(int i=0; i< prueba.length; i++){
       prueba[i] = (int)(Math.random() * (20 + 1 - 10) + 10);
       System.out.print(prueba[i] + " ");
     }
-    int minimo= Matematicas.ManipulacionArraysUnidimensionales.posicionEnArray(prueba, 18);
-    System.out.println("Finish: " + minimo);
+    int[] minimo= Matematicas.ManipulacionArraysUnidimensionales.volteaArrayInt(prueba);
+    //System.out.println("Finish: " + minimo);
+    System.out.println();
+    for(int iteration: minimo){
+      System.out.print(iteration + " ");
+    }
   }
   
   

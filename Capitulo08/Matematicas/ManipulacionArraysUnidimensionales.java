@@ -1,4 +1,5 @@
 package Matematicas;
+//Ejercicios 20-28
 public class ManipulacionArraysUnidimensionales {
   /*
    * Crea un Array del tamaño especificado, relleno con números aleatorios entre los intervalos
@@ -88,6 +89,21 @@ public class ManipulacionArraysUnidimensionales {
       }
     }
     return -1;
+  }
+  
+  /*  
+   * Le da la vuelta a la posición de los items del Array.
+   * @param int[]arr        Array a dar la vuelta
+   * @return                int[] volteado
+  */
+  public static int[] volteaArrayInt(int[]arr){
+    int aux = 0;
+    for(int i=0; i<arr.length/2; i++){
+      aux = arr[i];
+      arr[i] = arr[arr.length-1-i];
+      arr[arr.length-1-i] = aux;
+    }
+    return arr;
   }
   
 }
