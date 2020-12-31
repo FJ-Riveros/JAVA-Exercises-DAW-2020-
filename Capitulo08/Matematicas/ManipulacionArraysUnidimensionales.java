@@ -60,4 +60,19 @@ public class ManipulacionArraysUnidimensionales {
     return media/(arr.length);
   }
   
+  /*
+   * Nos dice si un valor en concreto está dentro del Array que se pasa.
+   * @param int[]arr        Array en el que buscar
+   * @param numToSearch     Número que buscar en el Array
+   * @return                boolean true si el número está en el Array, false al contrario
+  */
+  public static boolean estaEnArrayInt (int[]arr, int numToSearch){
+    for(int iteration: arr){
+      if(iteration == numToSearch){
+        return true;
+      }
+    }
+    return false;
+  }
+  
 }
