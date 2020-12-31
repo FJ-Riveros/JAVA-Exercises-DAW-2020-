@@ -75,4 +75,19 @@ public class ManipulacionArraysUnidimensionales {
     return false;
   }
   
+  /*
+   * Busca un número dentro de un Array y nos dice su índice(si no se encuentra -1).
+   * @param int[]arr        Array en el que buscar
+   * @param numToSearch     Número que buscar en el Array
+   * @return                int posición, si no se encuentra devuelve -1
+  */
+  public static int posicionEnArray (int[]arr, int numToSearch){
+    for(int i=0; i<arr.length; i++){
+      if(arr[i] == numToSearch){
+        return i;
+      }
+    }
+    return -1;
+  }
+  
 }

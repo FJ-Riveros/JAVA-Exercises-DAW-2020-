@@ -12,7 +12,7 @@ public static void main(String [] args){
       prueba[i] = (int)(Math.random() * (20 + 1 - 10) + 10);
       System.out.print(prueba[i] + " ");
     }
-    boolean minimo= Matematicas.ManipulacionArraysUnidimensionales.estaEnArrayInt(prueba, 18);
+    int minimo= Matematicas.ManipulacionArraysUnidimensionales.posicionEnArray(prueba, 18);
     System.out.println("Finish: " + minimo);
   }
   
