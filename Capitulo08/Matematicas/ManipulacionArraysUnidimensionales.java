@@ -106,4 +106,22 @@ public class ManipulacionArraysUnidimensionales {
     return arr;
   }
   
+  /*  
+   * Rota los números de un Array N posiciones a la derecha
+   * @param int[]arr        Array rotar
+   * @param rotacion        número de rotaciones a la derecha
+   * @return                int[] con las rotaciones realizadas
+  */
+  public static int[] rotaDerechaArrayInt(int[]arr, int rotation){
+    int aux = 0;
+    for(int j=0; j<rotation; j++){
+      aux = arr[arr.length-1];
+      for(int i=arr.length-1; i>0; i--){
+        arr[i] = arr[i - 1];
+      }
+      arr[0] = aux;
+    }
+    return arr;
+  }
+  
 }
