@@ -47,5 +47,17 @@ public class ManipulacionArraysUnidimensionales {
     return max;
   }
   
+  /*
+   * A partir de un Array unidimensional la media de todos los valores que contiene.
+   * @param int[]arr        Array del que la media
+   * @return                long media de los valores que contiene el Array
+  */
+  public static long mediaArrayInt (int[]arr){
+    long media = 0;
+    for(int i=0; i<arr.length; i++){
+      media += arr[i]; 
+    }
+    return media/(arr.length);
+  }
   
 }

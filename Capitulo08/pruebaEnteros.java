@@ -12,7 +12,7 @@ public static void main(String [] args){
       prueba[i] = (int)(Math.random() * (20 + 1 - 10) + 10);
       System.out.print(prueba[i] + " ");
     }
-    long minimo= Matematicas.ManipulacionArraysUnidimensionales.maximoArrayInt(prueba);
+    long minimo= Matematicas.ManipulacionArraysUnidimensionales.mediaArrayInt(prueba);
     System.out.println("Finish: " + minimo);
   }
   
