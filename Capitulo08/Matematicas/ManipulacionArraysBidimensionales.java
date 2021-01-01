@@ -33,4 +33,20 @@ public class ManipulacionArraysBidimensionales{
     }
     return arrResult;
   }
+  
+  /*  
+   * Devuelve la posición de el número indicado dentro de un array bidi
+   * si el número no es encontrado se devuelve {-1,-1}
+   * @param int[][]         Array bidimensional que introduce el usuario
+   * @param numDeseado      Número introducido a buscar dentro del array bidi
+   * @return                String con la posición del número, si no se encuentra {-1,-1} 
+  */
+  public static String coordenadasEnArrayBiInt(int[][] arr, int numeroDeseado){
+    for(int i=0; i<arr.length; i++){
+      for(int j=0; j<arr[0].length; j++){
+        if(arr[i][j] == numeroDeseado) return "{" + i + "," + j + "}";
+      }
+    }
+    return "{-1, -1}";
+  }
 }
