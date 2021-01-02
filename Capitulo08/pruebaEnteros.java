@@ -12,9 +12,9 @@ public static void main(String [] args){
       prueba[i][j] = (int)(Math.random() * (20 + 1 - 10) + 10);
       System.out.print(prueba[i] + " ");
     }*/
-    //int[][] minimo= Matematicas.ManipulacionArraysBidimensionales.generaArrayBiInt(5,5, 10, 20);
-    int[][] minimo = {{0,1,2,3,4}, {5,6,7,8,9}};
-    boolean posicion = Matematicas.ManipulacionArraysBidimensionales.esPuntoDeSilla(minimo,0, 1);
+    int[][] minimo= Matematicas.ManipulacionArraysBidimensionales.generaArrayBiInt(5,5, 10, 20);
+    //int[][] minimo = {{0,1,2,3,4}, {5,6,7,8,9}};
+    int[] result = Matematicas.ManipulacionArraysBidimensionales.diagonal(minimo,2, 3);
     System.out.println();
     for(int i=0; i<minimo.length; i++){
       for(int j=0; j<minimo[0].length; j++){
@@ -25,11 +25,10 @@ public static void main(String [] args){
     
     System.out.println();
     System.out.println();
-    System.out.println("Es punto de silla?" + posicion);
     
-    /*for(int i=0; i<result.length; i++){
+    for(int i=0; i<result.length; i++){
       System.out.print(result[i] + " ");
-    }*/
+    }
   }
   
   

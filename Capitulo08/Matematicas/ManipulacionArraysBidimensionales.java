@@ -72,4 +72,28 @@ public class ManipulacionArraysBidimensionales{
     }
     return true;
   }
+  
+  /*  
+   * Devuelve un Array con una de las diagonales del Array bidi introducido, 
+   * partiendo desde la columna y fila indicada por el usuario y 
+   * el input dirección que puede ser nose(noroeste hasta sureste) o neso
+   * (noreste hasta suroeste)
+   * @param int[][]         Array bidimensional que introduce el usuario
+   * @param filaNumero      Indica la fila del número seleccionado
+   * @param columnaNumero   Indica la columna del número seleccionado
+   * @param direccion       Indica la dirección de la diagonal
+   * @return                Array con la diagonal seleccionada 
+  */
+  public static int[] diagonal(int[][] arr, int filaNumero, int columnaNumero, String direccion){
+    //TERMINAR
+    int[] result = new int[arr.length];
+      if(direccion.equals("nose")){
+        result[i] = arr[i][i];
+      }else if(direccion.equals("neso")){
+        result[i] = arr[arr.length-1-i][arr[0].length-1-i];
+      }
+    }
+    return result;
+  }
+  
 }
