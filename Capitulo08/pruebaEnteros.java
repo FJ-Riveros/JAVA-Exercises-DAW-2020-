@@ -13,7 +13,7 @@ public static void main(String [] args){
       System.out.print(prueba[i] + " ");
     }*/
     int[][] minimo= Matematicas.ManipulacionArraysBidimensionales.generaArrayBiInt(5,5, 10, 20);
-    String posicion = Matematicas.ManipulacionArraysBidimensionales.coordenadasEnArrayBiInt(minimo, 14);
+    int[] posicion = Matematicas.ManipulacionArraysBidimensionales.coordenadasEnArrayBiInt(minimo, 13);
     System.out.println();
     for(int i=0; i<minimo.length; i++){
       for(int j=0; j<minimo[0].length; j++){
@@ -24,7 +24,8 @@ public static void main(String [] args){
     
     System.out.println();
     System.out.println();
-    System.out.println(posicion);
+    System.out.println(posicion[0] + " " + posicion[1]);
+    
     /*for(int i=0; i<result.length; i++){
       System.out.print(result[i] + " ");
     }*/

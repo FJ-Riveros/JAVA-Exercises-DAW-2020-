@@ -39,14 +39,31 @@ public class ManipulacionArraysBidimensionales{
    * si el número no es encontrado se devuelve {-1,-1}
    * @param int[][]         Array bidimensional que introduce el usuario
    * @param numDeseado      Número introducido a buscar dentro del array bidi
-   * @return                String con la posición del número, si no se encuentra {-1,-1} 
+   * @return                Array unidimensional con la posición del número, si no se encuentra {-1,-1} 
   */
-  public static String coordenadasEnArrayBiInt(int[][] arr, int numeroDeseado){
+  public static int[] coordenadasEnArrayBiInt(int[][] arr, int numeroDeseado){
     for(int i=0; i<arr.length; i++){
       for(int j=0; j<arr[0].length; j++){
-        if(arr[i][j] == numeroDeseado) return "{" + i + "," + j + "}";
+        if(arr[i][j] == numeroDeseado){
+          int[] pos = {i,j};
+            return pos;
+          }  
+        //return "{" + i + "," + j + "}";
       }
     }
-    return "{-1, -1}";
+    int[] pos = {-1, -1};
+    return pos;
+  }
+  
+  /*  
+   * Devuelve true si el número introducido es mínimo en su fila y máximo
+   * en su columna(punto de silla)
+   * @param int[][]         Array bidimensional que introduce el usuario
+   * @param       Número introducido a buscar dentro del array bidi
+   * @return                String con la posición del número, si no se encuentra {-1,-1} 
+  */
+  public static boolean esPuntoDeSilla(int[][] arr, int filaNumero, int columnaNumero){
+    
+    return true;
   }
 }
