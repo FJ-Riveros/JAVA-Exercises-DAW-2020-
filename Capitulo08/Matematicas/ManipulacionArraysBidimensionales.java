@@ -57,13 +57,19 @@ public class ManipulacionArraysBidimensionales{
   
   /*  
    * Devuelve true si el número introducido es mínimo en su fila y máximo
-   * en su columna(punto de silla)
+   * en su columna(punto de silla).
    * @param int[][]         Array bidimensional que introduce el usuario
-   * @param       Número introducido a buscar dentro del array bidi
-   * @return                String con la posición del número, si no se encuentra {-1,-1} 
+   * @param filaNumero      Indica la fila del número seleccionado
+   * @param columnaNumero   Indica la columna del número seleccionado
+   * @return                Boolean indicando si el número es punto de silla o no 
   */
   public static boolean esPuntoDeSilla(int[][] arr, int filaNumero, int columnaNumero){
-    
+    for(int i=0; i<arr[0].length; i++){
+      if(arr[filaNumero][i] < arr[filaNumero][columnaNumero]) return false;
+    }
+    for(int i=0; i<arr.length; i++){
+      if(arr[i][columnaNumero] > arr[filaNumero][columnaNumero]) return false; 
+    }
     return true;
   }
 }
