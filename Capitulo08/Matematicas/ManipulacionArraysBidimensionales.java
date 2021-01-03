@@ -1,4 +1,5 @@
 package Matematicas;
+import Matematicas.ManipulacionArraysUnidimensionales;
 public class ManipulacionArraysBidimensionales{
   /*  
    * Crea un Array bidimensional de las filas y columnas deseadas, además de 
@@ -43,7 +44,7 @@ public class ManipulacionArraysBidimensionales{
   public static int[] columnaDeArrayBiInt(int[][] arr, int columnDeseada){
     int[] arrResult = new int[arr.length];
     for(int i=0; i<arr.length; i++){
-      arrResult[i] = arr[i][columnaDeseada];
+      arrResult[i] = arr[i][columnDeseada];
     }
     return arrResult;
   }
@@ -78,17 +79,11 @@ public class ManipulacionArraysBidimensionales{
    * @return                Boolean indicando si el número es punto de silla o no 
   */
   public static boolean esPuntoDeSilla(int[][] arr, int filaNumero, int columnaNumero){
-    /*for(int i=0; i<arr[0].length; i++){
-      if(arr[filaNumero][i] < arr[filaNumero][columnaNumero]) return false;
-    }
-    for(int i=0; i<arr.length; i++){
-      if(arr[i][columnaNumero] > arr[filaNumero][columnaNumero]) return false; 
-    }
-    return true;*/
     int[] row = Matematicas.ManipulacionArraysBidimensionales.filaDeArrayBiInt(arr, filaNumero);
-    int[] column = Matematicas.ManipulacionArraysBidimensionales.(arr, filaNumero);
-    
-    return Matematicas.ManipulacionArraysUnidimensionales.arr[filaNumero][columnaNumero]
+    int[] column = Matematicas.ManipulacionArraysBidimensionales.columnaDeArrayBiInt(arr, columnaNumero);
+    return ((Matematicas.ManipulacionArraysUnidimensionales.minimoArrayInt(row) == arr[filaNumero][columnaNumero]) &&
+            (Matematicas.ManipulacionArraysUnidimensionales.maximoArrayInt(column) == arr[filaNumero][columnaNumero]));
+            
   }
   
   /*  
