@@ -14,7 +14,7 @@ public static void main(String [] args){
     }*/
     int[][] minimo= Matematicas.ManipulacionArraysBidimensionales.generaArrayBiInt(5,5, 10, 20);
     //int[][] minimo = {{0,1,2,3,4}, {5,6,7,8,9}};
-    int[] result = Matematicas.ManipulacionArraysBidimensionales.diagonal(minimo,2, 3);
+    int[] result = Matematicas.ManipulacionArraysBidimensionales.diagonal(minimo,2, 3, "neso");
     System.out.println();
     for(int i=0; i<minimo.length; i++){
       for(int j=0; j<minimo[0].length; j++){

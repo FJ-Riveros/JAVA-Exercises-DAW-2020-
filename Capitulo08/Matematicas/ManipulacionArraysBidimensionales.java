@@ -85,15 +85,27 @@ public class ManipulacionArraysBidimensionales{
    * @return                Array con la diagonal seleccionada 
   */
   public static int[] diagonal(int[][] arr, int filaNumero, int columnaNumero, String direccion){
-    //TERMINAR
-    int[] result = new int[arr.length];
-      if(direccion.equals("nose")){
-        result[i] = arr[i][i];
-      }else if(direccion.equals("neso")){
-        result[i] = arr[arr.length-1-i][arr[0].length-1-i];
+    int counter = 0;
+    int maxArraySize = arr.length; 
+    if(arr[0].length < arr.length){
+      maxArraySize = arr[0].length;
+    }else if(arr[0].length > arr.length){
+      maxArraySize = arr.length;
+    }
+    
+    int[] aux = new int[maxArraySize];
+    for(int i=0; i<arr.length; i++){
+      for(int j=0; j<arr[0].length; j++){
+        if((filaNumero - i == columnaNumero - j && direccion.equals("nose")) ||
+        (i - filaNumero == columnaNumero - j && direccion.equals("neso"))){
+          aux[counter++] = arr[i][j];
+        }
       }
+    }
+    int[] result = new int[counter];
+    for(int i=0; i<counter; i++){
+      result[i] = aux[i];
     }
     return result;
   }
-  
 }
