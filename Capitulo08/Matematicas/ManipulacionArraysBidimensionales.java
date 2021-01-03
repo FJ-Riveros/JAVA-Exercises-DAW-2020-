@@ -35,6 +35,20 @@ public class ManipulacionArraysBidimensionales{
   }
   
   /*  
+   * Devuelve la columna que se indica del Array bidi como parámetro
+   * @param int[][]         Array bidimensional que introduce el usuario
+   * @param columnDeseada   Columna que se desea obtener del Array bidi
+   * @return                int[] con la columna deseada por el usuario 
+  */
+  public static int[] columnaDeArrayBiInt(int[][] arr, int columnDeseada){
+    int[] arrResult = new int[arr.length];
+    for(int i=0; i<arr.length; i++){
+      arrResult[i] = arr[i][columnaDeseada];
+    }
+    return arrResult;
+  }
+  
+  /*  
    * Devuelve la posición de el número indicado dentro de un array bidi
    * si el número no es encontrado se devuelve {-1,-1}
    * @param int[][]         Array bidimensional que introduce el usuario
@@ -64,13 +78,17 @@ public class ManipulacionArraysBidimensionales{
    * @return                Boolean indicando si el número es punto de silla o no 
   */
   public static boolean esPuntoDeSilla(int[][] arr, int filaNumero, int columnaNumero){
-    for(int i=0; i<arr[0].length; i++){
+    /*for(int i=0; i<arr[0].length; i++){
       if(arr[filaNumero][i] < arr[filaNumero][columnaNumero]) return false;
     }
     for(int i=0; i<arr.length; i++){
       if(arr[i][columnaNumero] > arr[filaNumero][columnaNumero]) return false; 
     }
-    return true;
+    return true;*/
+    int[] row = Matematicas.ManipulacionArraysBidimensionales.filaDeArrayBiInt(arr, filaNumero);
+    int[] column = Matematicas.ManipulacionArraysBidimensionales.(arr, filaNumero);
+    
+    return Matematicas.ManipulacionArraysUnidimensionales.arr[filaNumero][columnaNumero]
   }
   
   /*  
