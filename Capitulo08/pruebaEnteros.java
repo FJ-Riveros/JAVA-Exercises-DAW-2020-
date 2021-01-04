@@ -13,15 +13,17 @@ public static void main(String [] args){
       System.out.print(prueba[i] + " ");
     }*/
     //int[][] minimo= Matematicas.ManipulacionArraysBidimensionales.generaArrayBiInt(5,5, 10, 20);
-    int[][] minimo = {{0,1,2,3,4}, {5,6,7,8,9}};
-    boolean result = Matematicas.ManipulacionArraysBidimensionales.esPuntoDeSilla(minimo, 1, 0);
+    //int[][] minimo = {{0,1,2,3,4}, {5,6,7,8,9}};
+    int[] prueba = {1,2,3,4,15};
+    //int[] prueba = Matematicas.ManipulacionArraysBidimensionales.filaDeArrayBiInt(minimo, 0);
+    boolean result = Matematicas.ManipulacionArraysUnidimensionales.estaEnArrayIntBinarySearch(prueba, 1);
     System.out.println();
-    for(int i=0; i<minimo.length; i++){
+    /*for(int i=0; i<minimo.length; i++){
       for(int j=0; j<minimo[0].length; j++){
         System.out.print(minimo[i][j] + " ");
       }
       System.out.println();
-    }
+    }*/
     
     System.out.println();
     System.out.println();

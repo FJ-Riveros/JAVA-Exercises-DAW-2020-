@@ -77,6 +77,29 @@ public class ManipulacionArraysUnidimensionales {
   }
   
   /*
+   * Nos dice si un valor en concreto está dentro del Array que se pasa utilizando
+   * binary search.
+   * @param int[]arr        Array en el que buscar
+   * @param numToSearch     Número que buscar en el Array
+   * @return                boolean true si el número está en el Array, false al contrario
+  */
+  public static boolean estaEnArrayIntBinarySearch (int[]arr, int numToSearch){
+    int pointerLeft = 0;
+    int pointerRight = arr.length - 1;
+    int pointerMid = 0;
+    while(pointerLeft <= pointerRight){
+      pointerMid = pointerLeft + (pointerRight - pointerLeft) / 2;
+      if(arr[pointerMid] == numToSearch) return true;
+      if(arr[pointerMid] < numToSearch){
+        pointerLeft = pointerMid + 1;
+      } else{
+        pointerRight = pointerMid - 1;
+      }
+    }
+    return false;
+  }
+  
+  /*
    * Busca un número dentro de un Array y nos dice su índice(si no se encuentra -1).
    * @param int[]arr        Array en el que buscar
    * @param numToSearch     Número que buscar en el Array
