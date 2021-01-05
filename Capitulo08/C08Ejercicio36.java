@@ -2,7 +2,7 @@ import static Matematicas.OperacionesEnteros.esPrimo;
 
 public class C08Ejercicio36{
   public static void main( String [] args){
-    int[] prueba = {4, 8, 8, 4, 8};
+    int[] prueba = {5, 2, 3, 10, 8};
     int[] result = filtraPrimos(prueba);
     for(int item: result){
       System.out.print(item + " ");
@@ -18,8 +18,8 @@ public class C08Ejercicio36{
   public static int[] filtraPrimos(int[] arr){
     int counter = 0;
     int[] aux = new int[arr.length];
-    for(int i=0; i<arr.length; i++){
-      if(esPrimo(arr[i])) aux[counter++] = arr[i];
+    for(int item: arr){
+      if(esPrimo(item)) aux[counter++] = item;
     }
     if(counter != 0){
       int[] result = new int[counter];
