@@ -5,7 +5,7 @@ public class OperacionesEnteros{
    * Nos dice si un int es primo o no.
    * @param x número entero
    * @return booleano true or false
-   */
+  */
   public static boolean esPrimo(int x){
     for(int i=2; i<x; i++){
       if(x%i==0){
@@ -19,7 +19,7 @@ public class OperacionesEnteros{
    * Nos dice el siguiente primo de un int.
    * @param x    número entero
    * @return     número entero
-   */
+  */
   public static int siguientePrimo(int x){
     boolean check = false;
     do{
@@ -36,7 +36,7 @@ public class OperacionesEnteros{
    * @param base        base de la operación
    * @param exponente   exponente de la operación
    * @return            número entero, resultado de la potencia
-   */
+  */
   public static long potencia(int base, int exponente){
     int aux = base;
     long result = (long)base;
@@ -54,7 +54,7 @@ public class OperacionesEnteros{
    * Devuelve la cantidad de dígitos de un número.
    * @param x           número del que se desean saber los dígitos
    * @return            número entero, cantidad de dígitos
-   */
+  */
   public static int digitos(long x){
     int counter = 0;
     while(x >0){
@@ -68,7 +68,7 @@ public class OperacionesEnteros{
    * Devuelve un long dado la vuelta.
    * @param x           long que se desea voltear
    * @return            long, el número dado la vuelta
-   */
+  */
   public static long volteado(long x){
     long volteado = 0;
     while(x > 0){

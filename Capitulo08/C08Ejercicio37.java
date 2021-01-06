@@ -7,6 +7,11 @@ public class C08Ejercicio37{
     System.out.println(convierteEnMorse(input));
   }
   
+  /*
+   * Convierte un número decimal a la codificación Morse.
+   * @param n      Entero decimal que deseamos convertir a Morse
+   * @return       String con el número convertido
+  */
   public static String convierteEnMorse(int n){
     String result = "";
     int digitoActual = 0;
