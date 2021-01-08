@@ -1,5 +1,4 @@
 package Matematicas;
-
 public class creacionDeFiguras{
   /*
    * Esta función nos devuelve un String con el caracter deseado con las

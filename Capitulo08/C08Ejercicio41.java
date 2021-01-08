@@ -1,7 +1,5 @@
 public class C08Ejercicio41{
   public static void main(String [] args){
-    //Terminar
-    //char caracter = '*';
     System.out.print  ("Introduzca la altura de la pirámide: ");
     int h = Integer.parseInt(System.console().readLine());
     System.out.print  ("Introduzca el carácter de la pirámide: ");
