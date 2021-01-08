@@ -3,7 +3,11 @@ import static Matematicas.OperacionesEnteros.digitoN;
 
 public class C08Ejercicio40{
   public static void main(String [] args){
-    
+    int[] prueba = {3, 32, 47, 907};
+    int[] result = filtraCon7(prueba);
+    for(int item: result){
+      System.out.print(item + " ");
+    }
   }
   
   
@@ -21,15 +25,15 @@ public class C08Ejercicio40{
     boolean check = false;
     int counter = 0;
     int counterArr = 0;
-    for(int i=0; i<arr.length; i++){
+    for(int i=0; i<x.length; i++){
       currentNummer = x[i];
       currentDigits = digitos(currentNummer);
       check = false;
       counter = 0;
       do{
-        if(digitoN(currentNummer) == 7) check = true;
+        if(digitoN(currentNummer,i) == 7) check = true;
         counter++;
-      }while(counter<currentDigits && digitoN(currentNummer)!= 7);
+      }while(counter<currentDigits && digitoN(currentNummer,i)!= 7);
       if(check) aux[counterArr++] = currentNummer;
     }
     return aux;
