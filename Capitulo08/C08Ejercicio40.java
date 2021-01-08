@@ -12,6 +12,8 @@ public class C08Ejercicio40{
    * @param x           Array input a filtrar
    * @return            Array con los items que contengan un 7
   */
+  
+  //Terminar
   public static int[] filtraCon7(int x[]){
     int[] aux = new int[x.length];
     int currentNummer = 0;
