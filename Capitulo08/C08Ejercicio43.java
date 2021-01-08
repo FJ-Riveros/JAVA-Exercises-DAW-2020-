@@ -7,8 +7,7 @@ public class C08Ejercicio43{
     char caracter = System.console().readLine().charAt(0);
     for(int j=0; j<h; j++){
       System.out.print(printLinea(' ', j));
-      System.out.print(printLinea(caracter, (h-j)));
-      System.out.println();
+      System.out.println(printLinea(caracter, (h-j)));
     }
   }
 }
