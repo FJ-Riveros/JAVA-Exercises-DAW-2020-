@@ -1,27 +1,30 @@
 public class C08Ejercicio41{
   public static void main(String [] args){
     //Terminar
-    System.out.print("Introduzca el carácter que desea para la pirámide");
-    String caracter = Char.parseChar(System.console().readLine());
-    System.out.print  ("Introduzca la altura de la pirámide");
+    //char caracter = '*';
+    System.out.print  ("Introduzca la altura de la pirámide: ");
     int h = Integer.parseInt(System.console().readLine());
+    System.out.print  ("Introduzca el carácter de la pirámide: ");
+    char caracter = System.console().readLine().charAt(0);
     for(int i=0; i<h; i++){
-      printLinea(caracter, h-i);
+      System.out.print(printLinea(caracter, h-i));
       System.out.println();
     }
   }
   /*
-   * Esta función printea por consola en una línea el caracter deseado con las
+   * Esta función nos devuelve un String con el caracter deseado con las
    * repeteciones que se indiquen.
    * 
-   * @param character         Carácter con el que queremos printear
+   * @param character         Carácter con el que queremos que se repita
    * @param repeticiones      Int con las veces que queremos que se repita
    *                          el carácter
-   * @return                  Print por consola.
+   * @return                  String con los carácteres repetidos.
   */ 
   public static String printLinea(char caracter, int repeticiones){
+    String result = "";
     for(int i=0; i<repeticiones; i++){
-      System.out.print(caracter);
+      result += caracter;
     }
+    return result;
   }
 }
