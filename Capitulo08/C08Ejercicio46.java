@@ -13,7 +13,6 @@ public class C08Ejercicio46 {
       counter -= 2;
       System.out.println(printLineaEspaciosCentrales(caracter, j));
     }
-    System.out.println();
     System.out.print(printLinea(caracter, h*2-1));
   }
 }
