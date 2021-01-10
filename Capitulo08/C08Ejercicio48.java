@@ -16,12 +16,11 @@ public class C08Ejercicio48{
   */ 
   public static int[] concatena(int[] arrA, int[] arrB){
     int result[] = new int[arrA.length + arrB.length];
-    int i=0;
-    for(i=0; i<arrA.length; i++){
+    for(int i=0; i<arrA.length; i++){
       result[i] = arrA[i];
     }
-    for(int j=i; j<arrA.length+arrB.length; j++){
-      result[j] = arrB[j-arrA.length];
+    for(int i=0; i<arrB.length; i++){
+      result[i+arrA.length] = arrB[i];
     }
     return result;
   }
