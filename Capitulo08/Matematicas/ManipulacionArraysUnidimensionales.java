@@ -214,4 +214,23 @@ public class ManipulacionArraysUnidimensionales {
       return result;
     }
   }
+  
+  /*
+   * Esta función nos devuelve la concatenación de dos Arrays unidimensionales
+   * de enteros.
+   * 
+   * @param arrA              Primer Array de números a concatenar
+   * @param arrB              Segundo Array de números a concatenar
+   * @return                  Array unidimensional con la concatenación de los dos.
+  */ 
+  public static int[] concatena(int[] arrA, int[] arrB){
+    int result[] = new int[arrA.length + arrB.length];
+    for(int i=0; i<arrA.length; i++){
+      result[i] = arrA[i];
+    }
+    for(int i=0; i<arrB.length; i++){
+      result[i+arrA.length] = arrB[i];
+    }
+    return result;
+  }
 }
