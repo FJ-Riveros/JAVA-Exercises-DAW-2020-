@@ -1,4 +1,3 @@
-import static Matematicas.creacionDeFiguras.printLinea;
 public class C08Ejercicio47{
   public static void main(String [] args){
     int[] arr = {0,3,4};
