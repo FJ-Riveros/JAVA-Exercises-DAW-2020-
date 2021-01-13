@@ -3,19 +3,18 @@ import static Matematicas.OperacionesEnteros.esPrimo;
 
 public class C08Ejercicio51{
   public static void main(String [] args){
-    String[] primo = {"no es primo", "es primo"};
-    String[] capicua = {"no es capicúa", "es capicúa"};
     int[] arr = new int[10];
-    String primo = "";
-    String capicua = "";
-    for(int item: arr){
-      item = (int)(Math.random()*(100+1-2))+2;
-      System.out.print(item + " ");
+    String textPrimo = "";
+    String textCapicua = "";
+    for(int i=0; i<arr.length; i++){
+      arr[i] = (int)(Math.random()*(100+1-2))+2;
+      System.out.print(arr[i] + " ");
     }
-    for(int item: arr){
-      capicua = esCapicua((long)item) ? "es capicúa" : "no es capicúa";
-      primo = esPrimo((long)item) ? "es primo" : "no es primo";
-      System.out.println("El " + item + primo + " y " + capicua);
+    System.out.println();
+    for(int prueba: arr){
+      textCapicua = esCapicua((long)prueba) ? "es capicúa" : "no es capicúa";
+      textPrimo = esPrimo(prueba) ? " es primo" : " no es primo";
+      System.out.println("El " + prueba + textPrimo + " y " + textCapicua);
     }
   }
 }
