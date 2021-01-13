@@ -189,6 +189,22 @@ public class OperacionesEnteros{
     return (x * potencia(10,digitos(y))) + y;
   }
   
+  /*
+   * Esta función devuelve el número de veces que aparece un dígito dentro de 
+   * un número.
+   * 
+   * @param digito            Dígito a comprobar
+   * @param n                 Número donde comprobar cuantas veces está el dígito
+   * @return                  Número de veces que aparece digito en n.
+  */
+  public static int ocurrencias(int digito, int n){
+    int counter = 0;
+    for(int i=0; i<digitos(n); i++){
+      if(digitoN((long)n, i) == digito) counter++;
+    }
+    return counter;
+  }
+  
   //////////////////////////////////////////////////////////////////////////////
   /*                                 Conversor de Sistemas                    */
   ////////////////////////////////////////////////////////////////////////////// 

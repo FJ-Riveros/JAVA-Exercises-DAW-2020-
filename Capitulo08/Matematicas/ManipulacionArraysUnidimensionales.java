@@ -1,4 +1,5 @@
 package Matematicas;
+import static Matematicas.OperacionesEnteros.ocurrencias;
 import static Matematicas.OperacionesEnteros.esCapicua;
 //Ejercicios 20-28
 public class ManipulacionArraysUnidimensionales {
@@ -242,5 +243,22 @@ public class ManipulacionArraysUnidimensionales {
   */
   public static int aleatorioDeArray(int[] a){
     return a[(int)(Math.random() * (a.length))];
+  }
+  
+  /*
+   * Esta función devuelve el número de veces que aparece un dígito en una serie
+   * de números contenidos en el Array.
+   * 
+   * @param digito            Dígito a comprobar
+   * @param a                 Array unidimensional que se pasa como input
+   * @return                  Número de veces que aparece el digito el Array
+   *                          input en total
+  */
+  public static int ocurrencias(int digito, int[] a){
+    int result = 0;
+    for(int i=0; i<a.length; i++){
+      result += ocurrencias(digito, a[i]);
+    }
+    return result;
   }
 }
