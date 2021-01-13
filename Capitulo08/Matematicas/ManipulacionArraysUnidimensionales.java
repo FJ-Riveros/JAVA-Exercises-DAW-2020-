@@ -233,4 +233,14 @@ public class ManipulacionArraysUnidimensionales {
     }
     return result;
   }
+  
+  /*
+   * Esta función nos devuelve un número del Array aleatoriamente.
+   * 
+   * @param a                 Array como input
+   * @return                  Entero con el número seleccionado
+  */
+  public static int aleatorioDeArray(int[] a){
+    return a[(int)(Math.random() * (a.length))];
+  }
 }
