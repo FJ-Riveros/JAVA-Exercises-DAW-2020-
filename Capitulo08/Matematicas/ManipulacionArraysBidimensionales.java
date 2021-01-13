@@ -121,4 +121,21 @@ public class ManipulacionArraysBidimensionales{
     }
     return result;
   }
+  
+  /*
+   * Esta función nos devuelve el número correspondiente a la posición del Array
+   * bidi que introduzcamos(introducimos la posición como si de un Array uni-
+   * dimensional)
+   * 
+   * @param n                 Array como input
+   * @param posicion          Posición que deseamos del Array bidi
+   * @return                  Número del Array que contiene la posición indicada.
+  */
+  public static int nEsimo(int[][] n, int posicion){
+    if(posicion < (n[0].length + n.length)){
+      return n[posicion/(n[0].length)][posicion%(n[0].length)];
+    }else{
+      return -1;
+    }
+  }
 }

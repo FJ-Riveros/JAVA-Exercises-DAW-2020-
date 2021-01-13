@@ -14,10 +14,13 @@ public class C08Ejercicio53{
   }
   
   /*
-   * Esta función nos devuelve un número del Array aleatoriamente.
+   * Esta función nos devuelve el número correspondiente a la posición del Array
+   * bidi que introduzcamos(introducimos la posición como si de un Array uni-
+   * dimensional)
    * 
-   * @param a                 Array como input
-   * @return                  Entero con el número seleccionado
+   * @param n                 Array como input
+   * @param posicion          Posición que deseamos del Array bidi
+   * @return                  Número del Array que contiene la posición indicada.
   */
   public static int nEsimo(int[][] n, int posicion){
     if(posicion < (n[0].length + n.length)){
