@@ -1,6 +1,7 @@
 package Matematicas;
 import static Matematicas.OperacionesEnteros.ocurrencias;
 import static Matematicas.OperacionesEnteros.esCapicua;
+import static Matematicas.OperacionesEnteros.esPrimo;
 //Ejercicios 20-28
 public class ManipulacionArraysUnidimensionales {
   /*
@@ -255,6 +256,7 @@ public class ManipulacionArraysUnidimensionales {
    *                          input en total
   */
   public static int ocurrencias(int digito, int[] a){
+    //Arreglar, no realiza la conversión
     int result = 0;
     for(int i=0; i<a.length; i++){
       result += ocurrencias(digito, a[i]);

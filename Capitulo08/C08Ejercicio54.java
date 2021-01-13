@@ -5,7 +5,7 @@ public class C08Ejercicio54{
     int num = 333;
     int digito = 3;
     //System.out.println(ocurrencias(digito, num));
-    int[] arr = {244,2,4,5,8,1};
+    int[] arr = {33,2,3,5,8,1};
     System.out.print("El total de " + digito + " que hay en el array es: "
     + ocurrencias(digito, arr));
   }
