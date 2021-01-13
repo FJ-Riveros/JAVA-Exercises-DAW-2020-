@@ -1,4 +1,3 @@
-
 public class C08Ejercicio52{
   public static void main(String [] args){
     int[] arr = {23,15,4,98};
