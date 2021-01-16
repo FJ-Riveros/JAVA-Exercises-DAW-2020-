@@ -1,8 +1,17 @@
+import static Matematicas.ManipulacionArraysBidimensionales.generaArrayBiInt;
 public class C08Ejercicio56{
   public static void main(String [] args){
     
-    String[] result = sinRepetir(arr);
-    for(String item: result) System.out.print(item + " ");
+    int[][] input = generaArrayBiInt(8,8,1,99);
+    for(int i=0; i<input.length; i++){
+      for(int j=0; j<input[0].length; j++){
+        System.out.printf("%5d",input[i][j]);
+      }
+      System.out.println();
+    }
+    System.out.println();
+    System.out.println();
+    for(int item: corteza(input)) System.out.print(item + " ");
   }
   
   /*
@@ -14,22 +23,24 @@ public class C08Ejercicio56{
    *                          Array bidimensional.
   */
   public static int[] corteza(int[][] n){
-    int[] result = new int[(x*2) + (y*2)];
     final int x = n[0].length;
     final int y = n.length;
+    System.out.print(x + " " + y);
+    System.out.println();
+    int[] result = new int[((x*2) + (y*2))-3];
     int counter = 0;
     for(int i=0; i<x; i++){
       result[counter++] = n[0][i];
     }
-    for(int i=0; i<y; i++){
-      result[counter++] = n[i][y-1];
+    for(int i=1; i<y; i++){
+      result[counter++] = n[i][x-1];
     }
-    for(int i=0; i<x; i++){
+    for(int i=1; i<x; i++){
       result[counter++] = n[y-1][x-i-1];
     }
-    for(int i=0; i<y; i++){
+    for(int i=1; i<y; i++){
       result[counter++] = n[y-i-1][0];
     }
+    return result;
   }
-  return result;
 }
