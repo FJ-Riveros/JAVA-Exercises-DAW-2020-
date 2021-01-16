@@ -27,7 +27,7 @@ public class C08Ejercicio56{
     final int y = n.length;
     System.out.print(x + " " + y);
     System.out.println();
-    int[] result = new int[((x*2) + (y*2))-3];
+    int[] result = new int[((x*2) + (y*2))-4];
     int counter = 0;
     for(int i=0; i<x; i++){
       result[counter++] = n[0][i];
@@ -38,7 +38,7 @@ public class C08Ejercicio56{
     for(int i=1; i<x; i++){
       result[counter++] = n[y-1][x-i-1];
     }
-    for(int i=1; i<y; i++){
+    for(int i=1; i<y-1; i++){
       result[counter++] = n[y-i-1][0];
     }
     return result;
