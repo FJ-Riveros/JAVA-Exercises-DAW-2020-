@@ -18,49 +18,38 @@ public class C08Ejercicio49{
   public static int[] lookAndSay(int terminos){
     int digitosTotales = 0;
     int item = 0;
-    int numeroIntroducir = 0;
     int[] arr = new int[terminos];
     arr[0] = 1;
     int selector = 0;
     int counter = 0;
     int counterArr = 1;
-    boolean check = false;
     int digitoAnterior = 1;
     
-    for(int i=1; i<terminos; i++){
-      item = arr[i-1];
-      System.out.print("I: "+ i+ " ");
-      for(int prueba: arr){
-        System.out.print(prueba + " ");
-      }
-      System.out.println();
-      //System.out.print("Item " + i + ": " + arr[i-1]);
+    for(int i=0; i<terminos; i++){
+      item = arr[i];
       digitosTotales = digitos(arr[item]);
       //System.out.println(i + " : " + digitosTotales);
       counter = 1;
-      digitoAnterior = digitoN((long)item, 0);
-      //System.out.println(digitoAnterior + " prueba: " + i);
-      
-      for(int j=0; j<digitosTotales; j++){
-        //check = false;
-        /*if(j==0){
-         digitoAnterior = digitoN((long)item, 0); 
-        }*/
-        selector = digitoN((long)item, j);
-        //System.out.print(item);
-        //System.out.print("Vuelta " + j + ": " + selector + "  ");
-        //System.out.print(digitoAnterior);
-        //System.out.println();
-        if( selector == digitoAnterior && (j != digitosTotales-1)){
-          counter++;
-        }else{
-          arr[counterArr++] = (counter*10)+digitoAnterior;
-          //System.out.print("Añado a array en la i: " + ((counter*10)+digitoAnterior) + " ");
-          counter = 1;
+      if(i==0 && terminos >=1){
+        arr[1] = 11;
+        System.out.print("Hola");
+      }else{
+        for(int j=1; j<digitosTotales; j++){
+          digitoAnterior = digitoN((long)item, j-1);
+          selector = digitoN((long)item, j);
+          System.out.print("DigitoAnt: " + digitoAnterior + " Selector: " + selector);
+          System.out.println();
+          if(selector == digitoAnterior && (j != digitosTotales-1)){
+            counter++;
+          }else{
+            arr[counterArr++] = (counter*10)+digitoAnterior;
+            //System.out.print("Yo ocurro en la i: " + i);
+            counter = 1;
+          }
         }
-        digitoAnterior = selector;
       }
     }
+    //System.out.print("Item: " + item + " ");
     return arr;
   }
 }
