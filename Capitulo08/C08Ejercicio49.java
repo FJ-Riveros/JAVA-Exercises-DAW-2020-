@@ -11,9 +11,8 @@ public class C08Ejercicio49{
    * Devuelve un Array, cada item es como se lee la concatenación de los números
    *que se pasan como parámetros.(Look and say)
    * 
-   * @param arrA              Primer Array de números a concatenar
-   * @param arrB              Segundo Array de números a concatenar
-   * @return                  Array unidimensional con la concatenación de los dos.
+   * @param terminos             Cantidad de terminos a ejecutar
+   * @return                     Términos(n) lookAndSay
   */ 
   public static int[] lookAndSay(int terminos){
     int digitosTotales = 0;
@@ -32,7 +31,6 @@ public class C08Ejercicio49{
       counter = 1;
       if(i==0 && terminos >=1){
         arr[1] = 11;
-        System.out.print("Hola");
       }else{
         for(int j=1; j<digitosTotales; j++){
           digitoAnterior = digitoN((long)item, j-1);
