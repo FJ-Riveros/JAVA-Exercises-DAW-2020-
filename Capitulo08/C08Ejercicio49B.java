@@ -15,8 +15,24 @@ public class C08Ejercicio49B{
    * @return                     Términos(n) lookAndSay
   */ 
   public static int[] lookAndSay(int terminos){
+    int[] result = new int[terminos];
+    int counter = 1;
+    if(terminos>= 1){
+      result[0];
+    }else{
+      return [];
+    }
     
-    
-    return arr;
+    for(int i=0; i<arr.length-2; i++){
+      siguienteNumero(i, result);
+    }
+    return result;
   }
+  
+  public static void siguienteNumero(int posicionArr, int[] arr){
+    
+     
+  }
+  
+  
 }
