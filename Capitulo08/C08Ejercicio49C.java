@@ -28,35 +28,35 @@ public class C08Ejercicio49C{
   
   public static void siguienteNumero(int posicionArr, String[] arr){
     arr[posicionArr] = generaNuevoItem(arr[posicionArr-1]);
-    //System.out.print(obtenerNuevoItem);
   }
   
   public static String generaNuevoItem(String anteriorItem){
-    String auxLength = anteriorItem;
     int counterVueltas = 0;
-    int counterDigitos = 1;
     String nuevoItem = "";
     char siguienteDigito = '0';
     char digitoActual = '0';
-    int sizeAnteriorDigito = anteriorItem.length();
-    int counter = 0;
       while(anteriorItem.length() > 0){
         counterVueltas = 1;
         if(anteriorItem.length() == 1){
-          System.out.print("hola" +anteriorItem.length() );
           nuevoItem += "" + 1 + anteriorItem.charAt(0);
           anteriorItem = "";
           return nuevoItem;
         }
         if(anteriorItem.charAt(0) - anteriorItem.charAt(1) == 0){
+          boolean check = false;
           do{
             digitoActual = anteriorItem.charAt(0);
             siguienteDigito = anteriorItem.charAt(counterVueltas++);
             if( digitoActual - siguienteDigito != 0 ){
               nuevoItem += "" + counterVueltas + digitoActual;
               anteriorItem = anteriorItem.substring(counterVueltas);
+              check = true;
             }
-          }while(digitoActual == siguienteDigito);
+          }while(digitoActual == siguienteDigito && counterVueltas<anteriorItem.length()-1);
+          if(!check){
+            nuevoItem += "" + counterVueltas + digitoActual;
+            anteriorItem = anteriorItem.substring(counterVueltas);
+          }
         }else{
           nuevoItem += "" + 1 + anteriorItem.charAt(0);
           anteriorItem = anteriorItem.substring(counterVueltas);
