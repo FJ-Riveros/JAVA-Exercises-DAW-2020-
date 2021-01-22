@@ -6,17 +6,15 @@ public class C08Ejercicio49C{
     int input = Integer.parseInt(System.console().readLine());
     String[] result = new String[input];
     lookAndSay(input, result);
-    for(String item: result){
-      System.out.print(item + " ");
+    for(int i=0; i<result.length; i++){
+      if(i == result.length-1){
+        System.out.print(result[i] + " ");
+      }else{
+        System.out.print(result[i] + ", ");
+      }
     }
   }
-  /*
-   * Devuelve un Array, cada item es como se lee la concatenación de los números
-   *que se pasan como parámetros.(Look and say)
-   * 
-   * @param terminos             Cantidad de terminos a ejecutar
-   * @return                     Términos(n) lookAndSay
-  */ 
+  
   public static void lookAndSay(int terminos, String[] result){
     if(terminos>= 1){
       result[0] = "1";
@@ -46,12 +44,13 @@ public class C08Ejercicio49C{
           boolean check = false;
           do{
             digitoActual = anteriorItem.charAt(0);
-            siguienteDigito = anteriorItem.charAt(counterVueltas++);
+            siguienteDigito = anteriorItem.charAt(counterVueltas);
             if( digitoActual - siguienteDigito != 0 ){
               nuevoItem += "" + counterVueltas + digitoActual;
               anteriorItem = anteriorItem.substring(counterVueltas);
               check = true;
             }
+            counterVueltas++;
           }while(digitoActual == siguienteDigito && counterVueltas<anteriorItem.length()-1);
           if(!check){
             nuevoItem += "" + counterVueltas + digitoActual;
