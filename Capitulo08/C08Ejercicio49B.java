@@ -21,20 +21,19 @@ public class C08Ejercicio49B{
     if(terminos>= 1){
       result[0] = "1";
     }
-    for(int i=0; i<result.length-1; i++){
+    for(int i=0; i<=result.length-2; i++){
       //System.out.print(result[i] + " ");
       siguienteNumero(i, result);
     }
   }
   
   public static void siguienteNumero(int posicionArr, String[] arr){
-    String obtenerNuevoItem = generaNuevoItem(arr[posicionArr]);
+    arr[posicionArr+1] = generaNuevoItem(arr[posicionArr]);
     //System.out.print(obtenerNuevoItem);
-    arr[posicionArr+1] = obtenerNuevoItem;
   }
   
   public static String generaNuevoItem(String anteriorItem){
-    int counterVueltas = 1;
+    int counterVueltas = 0;
     int counterDigitos = 1;
     String nuevoItem = "";
     char siguienteDigito = '0';
@@ -46,14 +45,24 @@ public class C08Ejercicio49B{
         siguienteDigito = anteriorItem.charAt(counterVueltas+1);
         digitoActual = anteriorItem.charAt(counterVueltas);
       //Revisar caso extremo final
-      //if(anteriorItem.charAt(counterVueltas) == anteriorItem.charAt(counterVueltas+1)){
-        if(digitoActual - siguienteDigito == 0){
+      //System.out.print("ocurro: "+ counterVueltas + " ");
+        if(digitoActual - siguienteDigito == 0 ){
           counterDigitos++;
+          if( counterVueltas == sizeAnteriorDigito-2 ){
+            
+            nuevoItem += "" + counterDigitos + anteriorItem.charAt(counterVueltas);
+            counterDigitos = 1;
+          }
         }else{
-          nuevoItem += "" + counterDigitos + anteriorItem.charAt(counterVueltas);
-          System.out.print("Nuevo item: " + nuevoItem + " ");
-          counterDigitos = 1;
+          if( counterVueltas == sizeAnteriorDigito-1 ){
+            nuevoItem += "" + counterDigitos + anteriorItem.charAt(counterVueltas+1);
+          }else{
+            nuevoItem += "" + counterDigitos + anteriorItem.charAt(counterVueltas);
+            System.out.print("Nuevo item: " + nuevoItem + "," + counterVueltas + " ");
+            counterDigitos = 1;
+          }
         }
+        System.out.print("Vueltas");
         counterVueltas++;
       }
     }else{
