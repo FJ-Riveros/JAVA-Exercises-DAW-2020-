@@ -1,7 +1,7 @@
   package Matematicas;
   import Matematicas.OperacionesEnteros;
-  import Matematicas.OperacionesEnteros.digitoN;
-  import Matematicas.OperacionesEnteros.digitos;
+  import  Matematicas.OperacionesEnteros.digitoN;
+  import  Matematicas.OperacionesEnteros.digitos;
   //////////////////////////////////////////////////////////////////////////////
   /*                                 Conversor de Sistemas                    */
   //////////////////////////////////////////////////////////////////////////////

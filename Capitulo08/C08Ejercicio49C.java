@@ -1,5 +1,3 @@
-import static Matematicas.OperacionesEnteros.digitoN;
-import static Matematicas.OperacionesEnteros.digitos;
 public class C08Ejercicio49C{
   public static void main(String [] args){
     System.out.print("Introduzca la cantidad de términos que desea: ");
