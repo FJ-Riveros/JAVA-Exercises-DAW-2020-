@@ -33,6 +33,7 @@ public class C08Ejercicio49C{
     String nuevoItem = "";
     char siguienteDigito = '0';
     char digitoActual = '0';
+    boolean check = false;
       while(anteriorItem.length() > 0){
         counterVueltas = 1;
         if(anteriorItem.length() == 1){
@@ -41,9 +42,9 @@ public class C08Ejercicio49C{
           return nuevoItem;
         }
         if(anteriorItem.charAt(0) - anteriorItem.charAt(1) == 0){
-          boolean check = false;
+          check = false;
+          digitoActual = anteriorItem.charAt(0);
           do{
-            digitoActual = anteriorItem.charAt(0);
             siguienteDigito = anteriorItem.charAt(counterVueltas);
             if( digitoActual - siguienteDigito != 0 ){
               nuevoItem += "" + counterVueltas + digitoActual;
