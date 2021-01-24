@@ -3,8 +3,8 @@ public class Ejercicio04{
     String[] input = {"Almohada", "Coche", "Avión", "Agua", "Hierro"};
     String[] aux = input.clone();
     int random = (int)(Math.random()* input.length);
-    String result = desordenaPalabra(aux[1]);
-    //System.out.print(result);
+    String result = desordenaPalabra(aux[0]);
+    System.out.print(result);
   }
   
   public static String desordenaPalabra(String word){
@@ -16,10 +16,13 @@ public class Ejercicio04{
     char temp = '0';
     do{
       check = compruebaValoresArray(muster);
+      for(char item: muster) System.out.print(item + " ");
       if(!check){
         randomA = (int)(Math.random()*muster.length);
         if(muster[randomA] != '*'){
           do{
+            //Cuando son pares tenemos el problema de que no se pueden encontrar
+            //dos posiciones válidas al final
             randomB = (int)(Math.random()*muster.length);
           }while(randomA == randomB || muster[randomB] == '*');
           temp = muster[randomA];
@@ -30,7 +33,7 @@ public class Ejercicio04{
         } 
       }
     }while(!check);
-    for(char item: muster) System.out.print(item + " ");
+    //for(char item: muster) System.out.print(item + " ");
     word = convierteArrayEnString(arrayFromWord);
     return word;
   }
