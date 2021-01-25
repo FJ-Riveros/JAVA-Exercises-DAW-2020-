@@ -18,26 +18,14 @@ public class EjercicioSorpresaModular{
       int igualadorColumnas = 0;
       switch(formato){
         case "filas":
-        comienzoFilas = 0;
-        finFilas = input.length;
-        comienzoColumnas = 0;
-        finColumnas = input[0].length;
         igualadorColumnas = 0;
         break;
         
         case "filainvertida":
-          comienzoFilas = 0;
-          finFilas = input.length;
-          comienzoColumnas = 0;
-          finColumnas = input[0].length;
           igualadorColumnas = input[0].length-1;
         break;
         
         case "columna":
-          comienzoFilas = 0;
-          finFilas = input.length;
-          comienzoColumnas = 0;
-          finColumnas = input[0].length;
           igualadorColumnas = 0;
           igualadorFilas = 0;
           
