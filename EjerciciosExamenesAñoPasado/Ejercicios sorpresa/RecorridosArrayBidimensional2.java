@@ -18,14 +18,9 @@ public class RecorridosArrayBidimensional2 {
     matrizBid = creaArrayBidimensionalRelleno(fil,col,valor1,valor2);
     
     presentaArray(matrizBid,"fila");
-    System.out.println();
     presentaArray(matrizBid,"filainvertida");
-    System.out.println();
     presentaArray(matrizBid,"columna");
-    System.out.println();
     presentaArray(matrizBid,"columnainvertida");
-    System.out.println();
-
   }
   
   
