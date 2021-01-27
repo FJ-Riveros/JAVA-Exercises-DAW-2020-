@@ -1,4 +1,3 @@
-
 public class EjercicioSorpresaSubmatriz{
   public static void main(String [] args){
     System.out.print("Introduzca la coordenada Y de la matriz original:");
