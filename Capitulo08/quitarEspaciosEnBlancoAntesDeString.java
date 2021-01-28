@@ -1,18 +1,25 @@
 //Hacer función que quite los espacios en blanco delante de un string
 public class quitarEspaciosEnBlancoAntesDeString{
   public static void main(String [] args){
-    String prueba = "   prueba";
+    String prueba = "          prueba";
     System.out.print(sinEspaciosEnBlanco(prueba));
   }
   
   
   public static String sinEspaciosEnBlanco(String input){
-    boolean check = true;
+    boolean check = false;
     int count = 0;
+    String result = "";
     do{
-      if(input.chartAt(count).equals(" ")){
+      if(input.charAt(count) == ' '){
         count++;
+      }else{
+        check = true;
       }
-    }while(counter<input.length() && !check);
+    }while(count<input.length() && !check);
+    for(int i=count; i<input.length(); i++){
+      result += input.charAt(i);
+    }
+    return result;
   }
 }
