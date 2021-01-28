@@ -3,8 +3,28 @@ public class Ejercicio04{
     String[] input = {"Almohada", "Coche", "Avión", "Agua", "Hierro"};
     String[] aux = input.clone();
     int random = (int)(Math.random()* input.length);
-    String result = desordenaPalabra(aux[0]);
-    System.out.print(result);
+    String result = desordenaPalabra(aux[random]);
+    System.out.print("Juego de " + "Adivina" + "la palabra \n");
+    System.out.println("La palabra desordenada es: " + result);
+    int counterIntentos = 0;
+    String userInput = "";
+    boolean endResult = false;
+    do{
+      System.out.print("Te quedan " + (5-counterIntentos) + ". Di qué palabra es: ");
+      userInput = System.console().readLine();
+      if(userInput.equals(aux[random])){
+        endResult = true;
+      }else{
+        System.out.print("Palabra incorrecta. ");
+      }
+      counterIntentos++;
+    }while(counterIntentos<5 && !endResult);
+    if(endResult){
+      System.out.print("\nEnhorabuena, has acertado la palabra " +  input[random]);
+    }else{
+      System.out.println("Lo siento, has agotado todos los intentos.");
+      System.out.print("La palabra era: " + input[random]);
+    }
   }
   
   public static String desordenaPalabra(String word){
@@ -14,26 +34,32 @@ public class Ejercicio04{
     int randomA = 0;
     int randomB = 0;
     char temp = '0';
+    int counterDePosicionesValidas = 0;
     do{
       check = compruebaValoresArray(muster);
-      for(char item: muster) System.out.print(item + " ");
-      if(!check){
-        randomA = (int)(Math.random()*muster.length);
-        if(muster[randomA] != '*'){
-          do{
-            //Cuando son pares tenemos el problema de que no se pueden encontrar
-            //dos posiciones válidas al final
-            randomB = (int)(Math.random()*muster.length);
-          }while(randomA == randomB || muster[randomB] == '*');
-          temp = muster[randomA];
-          arrayFromWord[randomA] = arrayFromWord[randomB];
-          arrayFromWord[randomB] = temp;
-          muster[randomA] = '*';
-          muster[randomB] = '*';
-        } 
+      counterDePosicionesValidas = 0;
+      for(int item: muster){
+        if(item != '*'){
+          counterDePosicionesValidas++;
+        }
+      }
+      if(counterDePosicionesValidas == 1) check = true;
+      if(counterDePosicionesValidas != 1){
+        if(!check){
+          randomA = (int)(Math.random()*muster.length);
+          if(muster[randomA] != '*'){
+            do{
+              randomB = (int)(Math.random()*muster.length);
+            }while(randomA == randomB || muster[randomB] == '*');
+            temp = muster[randomA];
+            arrayFromWord[randomA] = arrayFromWord[randomB];
+            arrayFromWord[randomB] = temp;
+            muster[randomA] = '*';
+            muster[randomB] = '*';
+          } 
+        }
       }
     }while(!check);
-    //for(char item: muster) System.out.print(item + " ");
     word = convierteArrayEnString(arrayFromWord);
     return word;
   }
@@ -43,9 +69,6 @@ public class Ejercicio04{
     for(int i=0; i<input.length(); i++){
       result[i] = input.charAt(i);
     }
-    /*for(int i=0; i<result.length; i++){
-      System.out.print(result[i] + " ");
-    } */
     return result;
   }
   
