@@ -20,6 +20,7 @@ public class Ejercicio1{
         counterDigito = 0;
       }
     }*/
+    //Suma uno de más
     char siguienteChar = 'x';
     for(int i=0; i<inputPalotes.length(); i++){
        siguienteChar = i!=(inputPalotes.length()-1) ? inputPalotes.charAt(i+1) : '0';
