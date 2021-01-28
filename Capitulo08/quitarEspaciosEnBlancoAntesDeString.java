@@ -1,4 +1,3 @@
-//Hacer función que quite los espacios en blanco delante de un string
 public class quitarEspaciosEnBlancoAntesDeString{
   public static void main(String [] args){
     String prueba = "          prueba";
