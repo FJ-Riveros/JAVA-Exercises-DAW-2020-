@@ -1,11 +1,5 @@
-//package libreriaPalotes;
-public class Ejercicio1{
-  public static void main(String [] args){
-    //System.out.print(conviertePalotesEnDecimal("---|-|||---|---"));
-    System.out.print(convierteDecimalEnPalotes(2345));
-  }
-
-
+package libreriaPalotes;
+public class funcionesAuxiliaresPalotes{
   public static int conviertePalotesEnDecimal(String inputPalotes){
     int counterDigito = 0;
     int numeroResultado = 0;
@@ -29,8 +23,9 @@ public class Ejercicio1{
       for(int i=0; i<input%10; i++){
         composicion += "|";
       }
-      result = composicion + "-" + result;
       input /= 10;
+      result = composicion + result;
+      if(input >0) result = "-" + result;
     }
     return result;
   }
