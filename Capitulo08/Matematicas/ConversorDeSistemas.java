@@ -12,7 +12,7 @@
    * @return                long en traducido a decimal
   */
   public static long conversorBinarioDecimal(long x){
-    int digits = Matematicas.OperacionesEnteros.digitos(x);
+    int digits = OperacionesEnteros.digitos(x);
     int multiplicador = 1;
     int result = 0;
     for(int i = 0; i < digits; i++){
