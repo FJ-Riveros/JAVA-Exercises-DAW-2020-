@@ -12,7 +12,7 @@ public class funcionesAux{
     }while(repetido);
     return random;
   }
-  //Mirar reintegros también
+  
   public static int premio(int[] yaPremiados,int[] premios, int userInput){
     boolean premioGrande = false;
     int premio = 0;
