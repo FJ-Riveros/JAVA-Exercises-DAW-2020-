@@ -7,20 +7,29 @@ public class OperacionesEnteros{
    * @return booleano true or false
   */
   public static boolean esPrimo(int x){
-    for(int i=2; i<x; i++){
+    return esPrimo((long)x); 
+  }
+  
+  /*
+   * Nos dice si un int es primo o no.
+   * @param x número entero
+   * @return booleano true or false
+  */
+  public static boolean esPrimo(long x){
+    for(long i=2; i<x; i++){
       if(x%i==0){
         return false;
       }
     }
     return true; 
   }
-
+  
   /*
    * Nos dice el siguiente primo de un int.
    * @param x    número entero
    * @return     número entero
   */
-  public static int siguientePrimo(int x){
+  public static long siguientePrimo(long x){
     boolean check = false;
     do{
       x++;
@@ -31,15 +40,25 @@ public class OperacionesEnteros{
     return x;
   }
   
+
+  /*
+   * Nos dice el siguiente primo de un int.
+   * @param x    número entero
+   * @return     número entero
+  */
+  public static int siguientePrimo(int x){
+    return (int)siguientePrimo((long)x);
+  }
+  
   /*
    * Devuelve la potencia de una base y un exponente.
    * @param base        base de la operación
    * @param exponente   exponente de la operación
    * @return            número entero, resultado de la potencia
   */
-  public static long potencia(int base, int exponente){
-    int aux = base;
-    long result = (long)base;
+  public static long potencia(long base, int exponente){
+    long aux = base;
+    long result = base;
     if(exponente != 0){
       for(int i=1; i<exponente; i++){
         result = result * aux;
@@ -76,6 +95,15 @@ public class OperacionesEnteros{
       x /= 10;
     }
     return volteado;
+  }
+  
+  /*
+   * Devuelve un long dado la vuelta.
+   * @param x           long que se desea voltear
+   * @return            long, el número dado la vuelta
+  */
+  public static int volteado(int x){
+    return (int)volteado((long)x);
   }
   
   /*
