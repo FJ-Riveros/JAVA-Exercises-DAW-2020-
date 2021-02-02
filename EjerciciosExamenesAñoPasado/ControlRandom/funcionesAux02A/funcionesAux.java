@@ -39,4 +39,13 @@ public class funcionesAux{
     }
     return counter;
   }
+  
+  public static void presentaPremios(int[] yaPremiados){
+    System.out.println("Los números premiados son: ");
+    for(int i=0; i<yaPremiados.length; i++){
+      System.out.print(yaPremiados[i] + " ");
+    }
+    System.out.println();
+    System.out.print("El reintegro es el: " + (yaPremiados[0]%10));
+  }
 }

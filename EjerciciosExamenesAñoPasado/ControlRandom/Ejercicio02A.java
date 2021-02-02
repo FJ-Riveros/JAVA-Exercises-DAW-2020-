@@ -7,7 +7,7 @@ public class Ejercicio02A{
     for(int i=0; i<premiados.length; i++){
       premiados[i] = funcionesAux02A.funcionesAux.numeroPremiado(premiados);
     }
-    for(int item: premiados) System.out.print(item + " ");
+    /*for(int item: premiados) System.out.print(item + " ");*/
     System.out.print("\nIntroduzca el número de su loteria: ");
     int userInput = Integer.parseInt(System.console().readLine());
     int premio = funcionesAux02A.funcionesAux.premio(premiados,premios,userInput);
@@ -16,6 +16,7 @@ public class Ejercicio02A{
     }else{
       System.out.print("Enhorabuena ha ganado " + premio + " euros");
     }
-    
+    System.out.println();
+    funcionesAux02A.funcionesAux.presentaPremios(premiados);
   }
 }
