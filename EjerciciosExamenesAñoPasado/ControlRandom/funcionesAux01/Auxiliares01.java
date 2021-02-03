@@ -1,7 +1,4 @@
 public class Auxiliares01{
-  
-  
-  
   public static char[] eligePalabra(String palabraElegida){
     char[] result = new char[palabraElegida.length()];
     for(int i=0; i<palabraElegida.length(); i++){
