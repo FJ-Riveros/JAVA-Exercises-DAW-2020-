@@ -1,8 +1,10 @@
+package funcionesAux01;
 public class Auxiliares01{
-  public static char[] eligePalabra(String palabraElegida){
-    char[] result = new char[palabraElegida.length()];
-    for(int i=0; i<palabraElegida.length(); i++){
-      result[i] = palabraElegida.charAt(i);
+  public static char[] eligePalabra(String[] ArrayPosibilidades){
+    String chosen = ArrayPosibilidades[(int)(Math.random()*(ArrayPosibilidades.length))];
+    char[] result = new char[chosen.length()];
+    for(int i=0; i<result.length; i++){
+      result[i] = chosen.charAt(i);
     }
     return result;
   }
