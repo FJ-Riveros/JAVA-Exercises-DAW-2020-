@@ -1,7 +1,7 @@
 import RecogidaDeDatos.Entrada;
 public class diagonalMatrizBidi{
   public static void main(String[] args){
-    //TERMINAR TENIENDO EN CUENTA EL CASO DE QUE ES MUY LIOSO
+    //TERMINAR TENIENDO EN CUENTA EL CASO DE QUE ES MUY LIOSO, CAMBIAR EL INPUT DEL USER CON NUMEROS
     System.out.print("Introduzca las filas del Array: ");
     final int SIZEROWS = RecogidaDeDatos.Entrada.Entero();
     System.out.print("Introduzca las columnas del Array: ");
