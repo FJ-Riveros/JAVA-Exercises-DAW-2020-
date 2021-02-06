@@ -3,7 +3,11 @@ package RecogidaDeDatos;
 public class Entrada{
   
   public static int Entero(){
-    return Integer.parseInt(System.console().readLine());
+    String entero = "";
+    do{
+      entero = System.console().readLine();
+    }while(entero.equals(""));
+    return Integer.parseInt(entero);
   }
   
   public static long Long(){
