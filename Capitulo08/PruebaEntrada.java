@@ -4,5 +4,6 @@ public class PruebaEntrada{
     System.out.print("Introduzca un entero: ");
     int prueba = Entero();
     System.out.print(prueba);
+    String hola = System.console().readLine();
   }
 }
