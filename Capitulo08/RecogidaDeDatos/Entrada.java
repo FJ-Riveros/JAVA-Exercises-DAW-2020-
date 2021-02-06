@@ -6,8 +6,18 @@ public class Entrada{
     String entero = "";
     do{
       entero = System.console().readLine();
-    }while(entero.equals(""));
+    }while(!compruebaInputEntero(entero));
     return Integer.parseInt(entero);
+  }
+  
+  public static boolean compruebaInputEntero(String input){
+    try{
+      Integer.parseInt(input);
+    }catch(Exception e){
+    System.out.print("El input(entero) no es correcto, vuelva a introducirlo: ");
+    return false;
+    }
+    return true;
   }
   
   public static long Long(){
