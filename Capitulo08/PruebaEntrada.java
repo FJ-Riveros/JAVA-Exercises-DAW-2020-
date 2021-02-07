@@ -4,9 +4,14 @@ public class PruebaEntrada{
     /*System.out.print("Introduzca un entero: ");
     int prueba = RecogidaDeDatos.Entrada.Entero();
     System.out.print(prueba);*/
-    long pruebalong = Entrada.Long();
+    /*long pruebalong = Entrada.Long();
     System.out.println(pruebalong);
     String pruebaString = Entrada.Cadena();
-    System.out.print(pruebaString);
+    System.out.print(pruebaString);*/
+    /*float pruebaFlotante = Entrada.Flotante();
+    System.out.print(pruebaFlotante);*/
+    char pruebaChar = Entrada.Caracter();
+    System.out.print(pruebaChar);
+    
   }
 }

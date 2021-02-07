@@ -47,11 +47,37 @@ public class Entrada{
   }
   
   public static float Flotante(){
-    return Float.parseFloat(System.console().readLine());
+    String flotante = "";
+    do{
+      flotante = System.console().readLine();
+    }while(!compruebaInputFlotante(flotante));
+    return Float.parseFloat(flotante);
+  }
+  
+  public static boolean compruebaInputFlotante(String input){
+    try{
+      Float.parseFloat(input);
+    }catch(Exception e){
+    System.out.print("Error de formato(Flotante), vuelva a introducirlo: ");
+    return false;
+    }
+    return true;
   }
   
   public static char Caracter(){
-    return System.console().readLine().charAt(0);
+    String caracter = "";
+    do{
+      caracter = System.console().readLine();
+    }while(!compruebaInputChar(caracter));
+    return caracter.charAt(0);
+  }
+  
+  public static boolean compruebaInputChar(String input){
+    if(input == "" || input.length() != 1){
+      System.out.print("Error de formato(Char), vuelva a introducirlo: ");
+      return false;
+    }
+    return true;
   }
   
 }
