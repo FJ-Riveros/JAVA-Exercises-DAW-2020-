@@ -14,18 +14,36 @@ public class Entrada{
     try{
       Integer.parseInt(input);
     }catch(Exception e){
-    System.out.print("El input(entero) no es correcto, vuelva a introducirlo: ");
+    System.out.print("Error de formato(entero), vuelva a introducirlo: ");
     return false;
     }
     return true;
   }
   
   public static long Long(){
-    return Long.parseLong(System.console().readLine());
+    String largo = "";
+    do{
+      largo = System.console().readLine();
+    }while(!compruebaInputLong(largo));
+    return Long.parseLong(largo);
+  }
+  
+  public static boolean compruebaInputLong(String input){
+    try{
+      Long.parseLong(input);
+    }catch(Exception e){
+    System.out.print("Error de formato(Long), vuelva a introducirlo: ");
+    return false;
+    }
+    return true;
   }
   
   public static String Cadena(){
-    return System.console().readLine();
+    String input = "";
+    do{
+      input = System.console().readLine();
+    }while(input.equals(""));
+    return input;
   }
   
   public static float Flotante(){
