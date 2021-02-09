@@ -31,7 +31,9 @@ public class PresentacionArray{
     System.out.println();
     for(int item: arr){
       System.out.print("│");
-      //System.out.printf("%d", item);
+      for(int i=0; i<digitosMax-cuentaDigitos(item); i++){
+        System.out.print(" ");
+      }
       System.out.print(item);
     }
     System.out.print("│");
@@ -78,7 +80,4 @@ public class PresentacionArray{
     return count;
   }
   
-  /*public static int digitosMaxArray(int[][] input){
-    for(int
-  }*/
 }
