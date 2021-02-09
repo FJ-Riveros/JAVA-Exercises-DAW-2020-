@@ -14,7 +14,6 @@ public class Entrada{
     try{
       Integer.parseInt(input);
     }catch(Exception e){
-    System.out.print("Error de formato(entero), vuelva a introducirlo: ");
     return false;
     }
     return true;
@@ -32,7 +31,6 @@ public class Entrada{
     try{
       Long.parseLong(input);
     }catch(Exception e){
-    System.out.print("Error de formato(Long), vuelva a introducirlo: ");
     return false;
     }
     return true;
@@ -58,7 +56,6 @@ public class Entrada{
     try{
       Float.parseFloat(input);
     }catch(Exception e){
-    System.out.print("Error de formato(Flotante), vuelva a introducirlo: ");
     return false;
     }
     return true;
@@ -74,7 +71,6 @@ public class Entrada{
   
   public static boolean compruebaInputChar(String input){
     if(input == "" || input.length() != 1){
-      System.out.print("Error de formato(Char), vuelva a introducirlo: ");
       return false;
     }
     return true;
