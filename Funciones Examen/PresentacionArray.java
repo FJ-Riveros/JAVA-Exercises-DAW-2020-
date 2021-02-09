@@ -13,25 +13,38 @@ public class PresentacionArray{
   }
   
   public static void presentaArrayFormateado(int[] arr){
+    int digitosMax = digitosMaxArray(arr);
     System.out.print("El Array tiene un tamaño de: " + arr.length);
     System.out.println();
     System.out.print("┌");
-    for(int i=0; i<arr.length-1; i++){
-      System.out.printf("───┬");
+    for(int i=0; i<arr.length; i++){
+      for(int j=0; j<digitosMax; j++){
+        System.out.print("─");
+        if(i == arr.length-1){
+          System.out.print("┐");
+        }else{
+        System.out.print("┬");
+        }
+      }
     }
-    System.out.print("───┐");
     System.out.println();
     for(int item: arr){
       System.out.print("│");
-      System.out.printf("%3d", item);
+      System.out.printf("%2d", item);
     }
     System.out.print("│");
     System.out.println();
     System.out.print("└");
-    for(int i=0; i<arr.length-1; i++){
-      System.out.print("───┴");
+    for(int i=0; i<arr.length; i++){
+      for(int j=0; j<digitosMax; j++){
+        System.out.print("─");
+        if(i == arr.length-1){
+          System.out.print("┘");
+        }else{
+          System.out.print("┴");
+        }
+      }
     }
-    System.out.print("───┘");
   }
   public static void rellenaArrayUni(int[] input, int max, int min){
     if(max < min){
@@ -43,5 +56,27 @@ public class PresentacionArray{
       input[i] = (int)(Math.random()* (max+1-min)+min);
     }
   }
-
+  
+  public static int digitosMaxArray(int[] input){
+    int max = 0;
+    for(int i=0; i<input.length; i++){
+      if(cuentaDigitos(input[i]) > max){
+        max = cuentaDigitos(input[i]);
+      }
+    }
+    return max;
+  }
+  
+  public static int cuentaDigitos(int num){
+    int count = 0;
+    while(num>0){
+      count++;
+      num /= 10;
+    }
+    return count;
+  }
+  
+  /*public static int digitosMaxArray(int[][] input){
+    for(int
+  }*/
 }
