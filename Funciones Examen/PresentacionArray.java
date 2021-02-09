@@ -14,23 +14,25 @@ public class PresentacionArray{
   
   public static void presentaArrayFormateado(int[] arr){
     int digitosMax = digitosMaxArray(arr);
+    System.out.print(digitosMax);
     System.out.print("El Array tiene un tamaño de: " + arr.length);
     System.out.println();
     System.out.print("┌");
     for(int i=0; i<arr.length; i++){
       for(int j=0; j<digitosMax; j++){
         System.out.print("─");
-        if(i == arr.length-1){
+      }
+      if(i == arr.length-1){
           System.out.print("┐");
-        }else{
+      }else{
         System.out.print("┬");
-        }
       }
     }
     System.out.println();
     for(int item: arr){
       System.out.print("│");
-      System.out.printf("%2d", item);
+      //System.out.printf("%d", item);
+      System.out.print(item);
     }
     System.out.print("│");
     System.out.println();
@@ -38,11 +40,11 @@ public class PresentacionArray{
     for(int i=0; i<arr.length; i++){
       for(int j=0; j<digitosMax; j++){
         System.out.print("─");
-        if(i == arr.length-1){
-          System.out.print("┘");
-        }else{
-          System.out.print("┴");
-        }
+      }
+      if(i == arr.length-1){
+        System.out.print("┘");
+      }else{
+        System.out.print("┴");
       }
     }
   }
