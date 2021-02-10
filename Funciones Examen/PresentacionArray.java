@@ -52,10 +52,59 @@ public class PresentacionArray{
   }
   
   public static void presentaArrayFormateado(int[][] arr){
+    int digitosMax = 0;
     for(int i=0; i<arr.length; i++){
-      presentaArrayFormateado(arr[i]);
+      if(digitosMax < digitosMaxArray(arr[i])) digitosMax = digitosMaxArray(arr[i]);
+    }
+    System.out.print("┌");
+    for(int i=0; i<arr[0].length; i++){
+      for(int j=0; j<digitosMax; j++){
+        System.out.print("─");
+      }
+      if(i == arr.length-1){
+          System.out.print("┐");
+      }else{
+        System.out.print("┬");
+      }
+    }
+    System.out.println();
+    String prueba = "%"+digitosMax+"d";
+    //Parte central
+    for(int x=0; x<arr.length; x++){
+      for(int u=0; u<arr[0].length; u++){
+        System.out.print("│");
+        System.out.printf(prueba, arr[x][u]);
+    
+      }
+      System.out.print("│");
+      System.out.println();
+      if(x==arr.length-1){
+        System.out.print("└");
+      }else{
+        System.out.print("├");
+      }
+      for(int b=0; b<arr[0].length; b++){
+        for(int o=0; o<digitosMax; o++){
+          System.out.print("─");
+        }
+        if(x!=arr.length-1){
+          if(b!=arr[0].length-1){
+            System.out.print("┼");
+          }else{
+            System.out.print("┤");
+          }
+        }else{
+          if(b!=arr[0].length-1){
+            System.out.print("┴");
+          }else{
+            System.out.print("┘");
+          }
+        }
+      }
+      System.out.println();
     }
   }
+  
   public static void rellenaArrayUni(int[] input, int max, int min){
     if(max < min){
       int aux = max;
@@ -93,5 +142,4 @@ public class PresentacionArray{
     }
     return count;
   }
-  
 }
