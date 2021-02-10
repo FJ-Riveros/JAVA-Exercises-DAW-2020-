@@ -1,7 +1,7 @@
 public class PresentacionArray{
   public static void main(String[] args){
     int[][] pruebaBidi = {{1,100,1000},{4,65,31},{2000,23,10200}};
-    /*System.out.print("Introduzca el número de items del Array: ");
+    System.out.print("Introduzca el número de items del Array: ");
     final int SIZE = Integer.parseInt(System.console().readLine());
     int[] input = new int[SIZE];
     System.out.print("Introduzca un valor: ");
@@ -9,8 +9,7 @@ public class PresentacionArray{
     System.out.print("Introduzca otro valor: ");
     final int MIN = Integer.parseInt(System.console().readLine());
     rellenaArrayUni(input, MAX, MIN);
-    presentaArrayFormateado(input);*/
-    //System.out.print(digitosMaxArray(pruebaBidi));
+    presentaArrayFormateado(input);
     presentaArrayFormateado(pruebaBidi);
 
   }
