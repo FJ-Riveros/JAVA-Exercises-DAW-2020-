@@ -59,7 +59,7 @@ public class EjercicioPila{
       return result;
     }else{
       System.out.println("La matriz ya está vacia");
-      return input;s
+      return input;
     }
   }
   
