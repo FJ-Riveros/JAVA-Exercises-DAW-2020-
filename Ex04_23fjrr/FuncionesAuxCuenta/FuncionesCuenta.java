@@ -43,8 +43,7 @@ public class FuncionesCuenta{
     String result = "";
     int indexTitular = buscaIndexTitular(titular, arrTitulares);
     if(compruebaIndexTitular(indexTitular)){
-      //result = String.format("%-20d %8f.2",titular,arrSaldos[indexTitular]);
-      result = titular + "                     " + arrSaldos[indexTitular];
+      result = String.format("%-20s %8f.2",titular,arrSaldos[indexTitular]);
     }
     return result;
   }
