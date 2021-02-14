@@ -49,8 +49,14 @@ public class FuncionesCuenta{
   }
   
   public static String informeCuentas(String[] arrTitulares, double[] arrSaldos){
+    boolean check = true;
     String result = "";
-    if(arrTitulares.length==-1) return "No hay cuentas en la base de datos";
+    for(int i=0; i<arrTitulares.length; i++){
+      if(!(arrTitulares[i].equals(""))){
+        check = false;
+      }
+    }
+    if(check || arrTitulares.length==-1 ) return "No hay cuentas en la base de datos";
     for(int i=0; i<arrTitulares.length; i++){
       result += String.format(informeTitular(arrTitulares[i], arrTitulares, arrSaldos) + "\n");
     }
