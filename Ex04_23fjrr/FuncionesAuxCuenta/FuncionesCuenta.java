@@ -43,14 +43,23 @@ public class FuncionesCuenta{
     String result = "";
     int indexTitular = buscaIndexTitular(titular, arrTitulares);
     if(compruebaIndexTitular(indexTitular)){
-      result = String.format("%-20s %8f.2",titular,arrSaldos[indexTitular]);
+      result = String.format("%-20s%8.2f",titular,arrSaldos[indexTitular]);
+    }
+    return result;
+  }
+  
+  public static String informeCuentas(String[] arrTitulares, double[] arrSaldos){
+    String result = "";
+    if(arrTitulares.length==-1) return "No hay cuentas en la base de datos";
+    for(int i=0; i<arrTitulares.length; i++){
+      result += String.format(informeTitular(arrTitulares[i], arrTitulares, arrSaldos) + "\n");
     }
     return result;
   }
   
   public static int buscaIndexTitular(String titular, String[] arrTitulares){
     for(int i=0; i<arrTitulares.length; i++){
-      if(arrTitulares[i] == titular){
+      if(arrTitulares[i].equals(titular)){
         return i;
       }
     }

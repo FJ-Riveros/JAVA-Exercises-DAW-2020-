@@ -25,16 +25,16 @@ public class Ejercicio01B{
         double cantidad = 0;
         switch(inputMenu){
           case 1:
-            //No terminado
+            System.out.print(FuncionesAuxCuenta.FuncionesCuenta.informeCuentas(Titulares, Saldos));
           break;
           
           case 2:
             System.out.print("Indique el titular de la cuenta: ");
             titular = System.console().readLine();
             if(FuncionesAuxCuenta.FuncionesCuenta.informeTitular(titular, Titulares, Saldos) == ""){
-              System.out.print(FuncionesAuxCuenta.FuncionesCuenta.informeTitular(titular, Titulares, Saldos));
-            }else{
               System.out.print("No se encuentra el titular.");
+            }else{
+              System.out.println(FuncionesAuxCuenta.FuncionesCuenta.informeTitular(titular, Titulares, Saldos));
             }
           break;
           
@@ -59,7 +59,7 @@ public class Ejercicio01B{
             if(FuncionesAuxCuenta.FuncionesCuenta.retirada(titular, cantidad, Titulares, Saldos)){
               System.out.print("Operación realizada satisfactoriamente: ");
             }else{
-              System.out.print("No se ha podido realizar la operación: ");
+              System.out.println("No se ha podido realizar la operación. ");
             }
           break;
           
