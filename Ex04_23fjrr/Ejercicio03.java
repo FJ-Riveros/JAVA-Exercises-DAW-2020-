@@ -33,14 +33,25 @@ public class Ejercicio03{
     if(cifras == 2){
       return num;
     }else{
-      long result = num/potencia(10,cifras-2);
-      return result;
+      long result = 0;
+      if(cifras % 2 == 0){
+        result = num/potencia(10,cifras-2);
+      }else{
+        result = num/potencia(10,cifras-1);
+      }
+      return result;  
     }
   }
   
   public static long devuelveNumSinPrimerosDigitos(long num){
     int cifras = devuelveCifras(num);
-    long result = num % potencia(10, (cifras - 2));
+    long result = 0;
+    if(cifras % 2 == 0){
+      result = num % potencia(10, (cifras - 2));
+    }else{
+      result = num % potencia(10, (cifras - 1));
+    }
+    
     return result;
   }
   
