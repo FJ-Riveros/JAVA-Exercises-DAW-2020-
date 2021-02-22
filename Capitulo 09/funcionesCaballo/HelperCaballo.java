@@ -19,4 +19,22 @@ public class HelperCaballo{
     for(char item: input) result+= item;
     return result;
   }
+  
+  public static boolean aumentaContenidoBarra(char[] input){
+    if(!checkBarraCompleta(char[] input)){
+      for(int i=0; i<input.length; i++){
+        if(input[i] != '▓'){
+          input[i] = '▓' 
+          return true;
+        }
+      }
+    }
+    return false;
+    
+  }
+  
+  public static boolean checkBarraCompleta(char[] input){
+    if(input[input.length-1] == '▓') return true;
+    return false;
+  }
 }

@@ -34,7 +34,7 @@ public class Caballo{
   
   //Setters
   public void alimentaCaballo(){
-    
+    HelperCaballo.aumentaContenidoBarra(this.foodEnergy);
   }
   //Getters
   public String devuelveDatosCaballo(){
