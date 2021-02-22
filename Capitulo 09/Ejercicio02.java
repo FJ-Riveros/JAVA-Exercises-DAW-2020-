@@ -9,7 +9,7 @@ public class Ejercicio02 {
       menu();
       switch(option){
         case 1:
-        
+          if(
         break;
         
         case 2:

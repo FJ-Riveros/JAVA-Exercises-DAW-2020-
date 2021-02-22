@@ -33,8 +33,15 @@ public class HelperCaballo{
     
   }
   
+  //Devuelve true si la barra está completa
   public static boolean checkBarraCompleta(char[] input){
     if(input[input.length-1] == '▓') return true;
+    return false;
+  }
+  
+  //Devuelve true si la barra está vacia por completo
+  public static boolean checkBarraVacia(char[] input){
+    if(input[0] == ' ') return true;
     return false;
   }
 }
