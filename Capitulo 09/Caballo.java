@@ -1,10 +1,11 @@
+import funcionesCaballo.HelperCaballo;
 public class Caballo{
   float altura, peso;
   int edad;
   
-  char[] foodEnergy = new char[10];
-  char[] sleepEnergy = new char[10];
-  char[] water = new char[10];
+  char[] foodEnergy = {'#','#','#','#','#',' ',' ',' ',' ',' '};
+  char[] sleepEnergy ={'#','#','#','#','#',' ',' ',' ',' ',' '};
+  char[] water = {'#','#','#','#','#',' ',' ',' ',' ',' '};
   
   Caballo(){
     this.altura = (float)0;
@@ -29,19 +30,8 @@ public class Caballo{
     this.peso = inputPeso;
     this.edad = inputEdad;
   }
-  //Helper
-  public int devuelveNivel(char[] input){
-    int count = 0;
-    boolean check = true;
-    for(int i=0; i<input.length&&check; i++){
-      if(input[i]==#){
-        count++;
-      }else{
-        check = false;
-      } 
-    }
-    return count;
-  }
+  
+  
   //Setters
   public void alimentaCaballo(){
     
@@ -54,8 +44,14 @@ public class Caballo{
     info = info + "Edad: " + this.edad + "\n";
     return info;
   }
-  
-  public String
+  //Presenta por barras el status del caballo actualmente
+  public String presentaStats(){
+    String result = "";
+    result = String.format("%-14s%10s\n", "Alimentación:",HelperCaballo.contenidoBarra(this.foodEnergy));
+    result += String.format("%-14s%10s\n","Descanso:", HelperCaballo.contenidoBarra(this.sleepEnergy));
+    result += String.format("%-14s%10s\n","Hidratación: ", HelperCaballo.contenidoBarra(this.water));
+    return result;
+  }
   
   
 
