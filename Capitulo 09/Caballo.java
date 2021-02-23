@@ -55,7 +55,13 @@ public class Caballo{
   
   //Comprueba si se puede aumentar una barra en especial
   public boolean checkAumento(char[] input){
-    if(HelperCaballo.checkBarraCompleta(char[] input)) return false;
+    if(HelperCaballo.checkBarraCompleta(input)) return false;
+    return true;
+  }
+  
+  //Comprueba si se puede disminuir una barra en especial
+  public boolean checkDisminucion(char[] input){
+    if(HelperCaballo.checkBarraVacia(input)) return false;
     return true;
   }
   

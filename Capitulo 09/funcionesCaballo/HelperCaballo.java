@@ -21,10 +21,10 @@ public class HelperCaballo{
   }
   
   public static boolean aumentaContenidoBarra(char[] input){
-    if(!checkBarraCompleta(char[] input)){
+    if(!checkBarraCompleta(input)){
       for(int i=0; i<input.length; i++){
         if(input[i] != '▓'){
-          input[i] = '▓' 
+          input[i] = '▓';
           return true;
         }
       }
