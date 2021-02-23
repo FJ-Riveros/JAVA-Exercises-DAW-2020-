@@ -19,7 +19,11 @@ public class Ejercicio02 {
       menu();
       switch(option){
         case 1:
-          if(checkAumento
+          if(pegaso.checkAumento("Comida")){
+            pegaso.
+          }else{
+            System.out.print("El caballo no tiene hambre");
+          }
         break;
         
         case 2:

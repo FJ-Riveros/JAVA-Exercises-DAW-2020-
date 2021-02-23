@@ -54,8 +54,16 @@ public class Caballo{
   }
   
   //Comprueba si se puede aumentar una barra en especial
-  public boolean checkAumento(char[] input){
-    if(HelperCaballo.checkBarraCompleta(input)) return false;
+  public boolean checkAumento(String input){
+    String choose = "";
+    if(input == "Comida"){
+      choose = this.foodEnergy;
+    }else if(input == "Agua"){
+      choose = this.water;
+    }else{
+      choose = this.sleepEnergy;
+    }
+    if(HelperCaballo.checkBarraCompleta(choose)) return false;
     return true;
   }
   
@@ -65,7 +73,15 @@ public class Caballo{
     return true;
   }
   
-  
-
-  
+  public void aumentaBarra(String input){
+    String choose = "";
+    if(input == "Comida"){
+      choose = this.foodEnergy;
+    }else if(input == "Agua"){
+      choose = this.water;
+    }else{
+      choose = this.sleepEnergy;
+    }
+    HelperCaballo.aumentaContenidoBarra(choose);
+  }
 }
