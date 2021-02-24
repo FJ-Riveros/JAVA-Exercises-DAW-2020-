@@ -82,4 +82,21 @@ public class Caballo{
       HelperCaballo.aumentaContenidoBarra(this.sleepEnergy);
     }
   }
+  
+  public String saltoCaballo(){
+    String result = "";
+    for(int i=0; i<10; i++){
+      for(int j=0; j<50; j++){
+        if(i==9){
+          result+="-";
+        }else if(j==0|j==49){
+          result+="|";
+        }else{
+          result+=" ";
+        }
+      }  
+      result+="\n";
+    }
+    return result;
+  }
 }

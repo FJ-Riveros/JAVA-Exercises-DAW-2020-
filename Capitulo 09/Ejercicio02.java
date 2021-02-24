@@ -46,7 +46,7 @@ public class Ejercicio02 {
         break;
         
         case 4:
-        
+          System.out.print(pegaso.saltoCaballo());
         break;
         
         case 5:
@@ -69,6 +69,5 @@ public class Ejercicio02 {
     System.out.println("5. Galopar");
     System.out.println("6. Estatus del Caballo");
     System.out.println("7. Salir");
-    
   }  
 }
