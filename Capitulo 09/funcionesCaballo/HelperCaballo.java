@@ -5,7 +5,7 @@ public class HelperCaballo{
     int count = 0;
     boolean check = true;
     for(int i=0; i<input.length&&check; i++){
-      if(input[i]=='#'){
+      if(input[i]=='▓'){
         count++;
       }else{
         check = false;

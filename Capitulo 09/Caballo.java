@@ -3,9 +3,9 @@ public class Caballo{
   float altura, peso;
   int edad;
   
-  char[] foodEnergy = {'#','#','#','#','#',' ',' ',' ',' ',' '};
-  char[] sleepEnergy ={'#','#','#','#','#',' ',' ',' ',' ',' '};
-  char[] water = {'#','#','#','#','#',' ',' ',' ',' ',' '};
+  char[] foodEnergy = {'▓','▓','▓','▓','▓','░','░','░','░','░'};
+  char[] sleepEnergy ={'▓','▓','▓','▓','▓','░','░','░','░','░'};
+  char[] water = {'▓','▓','▓','▓','▓','░','░','░','░','░'};
   
   Caballo(){
     this.altura = (float)0;
@@ -48,14 +48,14 @@ public class Caballo{
   public String presentaStats(){
     String result = "";
     result = String.format("%-14s%10s\n", "Alimentación:",HelperCaballo.contenidoBarra(this.foodEnergy));
-    result += String.format("%-14s%10s\n","Descanso:", HelperCaballo.contenidoBarra(this.sleepEnergy));
-    result += String.format("%-14s%10s\n","Hidratación: ", HelperCaballo.contenidoBarra(this.water));
+    result += String.format("\n%-14s%10s\n","Descanso:", HelperCaballo.contenidoBarra(this.sleepEnergy));
+    result += String.format("\n%-14s%10s\n","Hidratación: ", HelperCaballo.contenidoBarra(this.water));
     return result;
   }
   
   //Comprueba si se puede aumentar una barra en especial
   public boolean checkAumento(String input){
-    String choose = "";
+    char[] choose;
     if(input == "Comida"){
       choose = this.foodEnergy;
     }else if(input == "Agua"){
@@ -74,14 +74,12 @@ public class Caballo{
   }
   
   public void aumentaBarra(String input){
-    String choose = "";
     if(input == "Comida"){
-      choose = this.foodEnergy;
+      HelperCaballo.aumentaContenidoBarra(this.foodEnergy);
     }else if(input == "Agua"){
-      choose = this.water;
+      HelperCaballo.aumentaContenidoBarra(this.water);
     }else{
-      choose = this.sleepEnergy;
+      HelperCaballo.aumentaContenidoBarra(this.sleepEnergy);
     }
-    HelperCaballo.aumentaContenidoBarra(choose);
   }
 }
