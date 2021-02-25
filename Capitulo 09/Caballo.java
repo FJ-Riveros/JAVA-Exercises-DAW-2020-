@@ -68,8 +68,16 @@ public class Caballo{
   }
   
   //Comprueba si se puede disminuir una barra en especial
-  public boolean checkDisminucion(char[] input){
-    if(HelperCaballo.checkBarraVacia(input)) return false;
+  public boolean checkDisminucion(String input){
+    char[] choose;
+    if(input == "Comida"){
+      choose = this.foodEnergy;
+    }else if(input == "Agua"){
+      choose = this.water;
+    }else{
+      choose = this.sleepEnergy;
+    }
+    if(HelperCaballo.checkBarraVacia(choose)) return false;
     return true;
   }
   
@@ -82,6 +90,18 @@ public class Caballo{
       HelperCaballo.aumentaContenidoBarra(this.sleepEnergy);
     }
   }
+  
+  public void disminuyeBarra(String input){
+    if(input == "Comida"){
+      HelperCaballo.disminuyeContenidoBarra(this.foodEnergy);
+    }else if(input == "Agua"){
+      HelperCaballo.disminuyeContenidoBarra(this.water);
+    }else{
+      HelperCaballo.disminuyeContenidoBarra(this.sleepEnergy);
+    }
+  }
+  
+  
   
   public String saltoCaballo(){
     String result = "";

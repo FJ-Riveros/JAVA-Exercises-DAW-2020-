@@ -33,6 +33,16 @@ public class HelperCaballo{
     
   }
   
+  public static void disminuyeContenidoBarra(char[] input){
+    boolean check = false;
+    for(int i=0; i<input.length&&!check; i++){
+      if(input[i+1] != '▓'){
+        input[i] = '░';
+        check = true;
+      }
+    }
+  }
+  
   //Devuelve true si la barra está completa
   public static boolean checkBarraCompleta(char[] input){
     if(input[input.length-1] == '▓') return true;
@@ -41,7 +51,7 @@ public class HelperCaballo{
   
   //Devuelve true si la barra está vacia por completo
   public static boolean checkBarraVacia(char[] input){
-    if(input[0] == ' ') return true;
+    if(input[0] == '░') return true;
     return false;
   }
 }

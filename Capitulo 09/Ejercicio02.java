@@ -1,22 +1,24 @@
+import RecogidaDeDatos.Entrada;
+
 public class Ejercicio02 {
   public static void main(String[] args){
     int option = 0;
-    System.out.println("Si no sabe alguno de los datos requeridos, presione enter." );
+    System.out.println("Recogida de datos del caballo." );
     /*System.out.print("Escriba el nombre de su caballo:" );
     String nombre = System.console().readLine();*/
     System.out.print("Escriba la altura de su caballo:" );
-    float altura = Float.parseFloat(System.console().readLine());
+    float altura = Entrada.Flotante();
     System.out.print("Escriba el peso de su caballo:" );
-    float peso = Float.parseFloat(System.console().readLine());
+    float peso = Entrada.Flotante();
     System.out.print("Escriba la edad de su caballo:" );
-    int edad = Integer.parseInt(System.console().readLine());
+    int edad = Entrada.Entero();
     
     Caballo pegaso = new Caballo(altura, peso, edad);
     //System.out.print(pegaso.devuelveDatosCaballo());
      
     do{
       menu();
-      option = Integer.parseInt(System.console().readLine());
+      option = Entrada.Entero();
       switch(option){
         case 1:
           if(pegaso.checkAumento("Comida")){
@@ -46,7 +48,13 @@ public class Ejercicio02 {
         break;
         
         case 4:
-          System.out.print(pegaso.saltoCaballo());
+          if(pegaso.checkDisminucion("Comida")){
+            pegaso.disminuyeBarra("Comida");
+            System.out.print(pegaso.saltoCaballo());
+          }else{
+            System.out.println("El caballo no puede saltar");
+          }
+          
         break;
         
         case 5:
