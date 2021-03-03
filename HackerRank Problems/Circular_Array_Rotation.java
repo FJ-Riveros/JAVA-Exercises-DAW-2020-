@@ -1,5 +1,5 @@
 //https://www.hackerrank.com/challenges/circular-array-rotation/problem
-//Too slow
+//Too slow, intentar hacer sin bucles con operaciones.
 public class Circular_Array_Rotation{
   public static void main(String[] args){
     int[] input = {1,2,3};
