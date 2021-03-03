@@ -1,7 +1,5 @@
   package Matematicas;
   import Matematicas.OperacionesEnteros;
-  import  Matematicas.OperacionesEnteros.digitoN;
-  import  Matematicas.OperacionesEnteros.digitos;
   //////////////////////////////////////////////////////////////////////////////
   /*                                 Conversor de Sistemas                    */
   //////////////////////////////////////////////////////////////////////////////
@@ -182,9 +180,9 @@
   public static String convierteEnMorse(int n){
     String result = "";
     int digitoActual = 0;
-    for(int i=0; i<digitos(n); i++){
+    for(int i=0; i<OperacionesEnteros.digitos(n); i++){
       for(int j=1; j<=5; j++){
-        digitoActual = digitoN((long)n, i);
+        digitoActual = OperacionesEnteros.digitoN((long)n, i);
         if(digitoActual == 0){
           result += "_ ";
         }else{
