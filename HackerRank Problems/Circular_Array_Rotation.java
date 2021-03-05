@@ -8,9 +8,32 @@ public class Circular_Array_Rotation{
     int[] result = circularArrayRotation(input, rotations, queries);
     for(int item: result)System.out.print(item + " ");
   }
-  
-  
+  //Faster, still fails in the case 4
   static int[] circularArrayRotation(int[] a, int k, int[] queries) {
+    int[] store = new int[a.length];
+    int[] result = new int[queries.length];
+    int temp = 0;
+    int helper = 0;
+    int newPos = 0;
+    while(k>a.length){
+      k/= a.length;
+    }
+    for(int i=0; i<a.length; i++){
+      if(i+k+1 > a.length){
+        helper = (i+k) - a.length;
+        store[helper] = a[i];
+      }else{
+        store[i+k] = a[i];
+      }
+    }
+    for(int i=0; i<queries.length; i++){
+      result[i] = store[queries[i]];
+    }
+    return result;
+  }
+  
+  //Too slow
+  /*static int[] circularArrayRotation(int[] a, int k, int[] queries) {
     int[] result = new int[queries.length];
     int temp = 0;
     for(int i=0; i<k; i++){
@@ -25,5 +48,5 @@ public class Circular_Array_Rotation{
       result[counter++] = a[queries[j]];
     } 
     return result;
-  }
+  }*/
 }
