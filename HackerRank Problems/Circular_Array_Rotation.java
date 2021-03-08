@@ -1,5 +1,4 @@
 //https://www.hackerrank.com/challenges/circular-array-rotation/problem
-//Too slow, intentar hacer sin bucles con operaciones.
 public class Circular_Array_Rotation{
   public static void main(String[] args){
     int[] input = {1,2,3};
@@ -8,22 +7,18 @@ public class Circular_Array_Rotation{
     int[] result = circularArrayRotation(input, rotations, queries);
     for(int item: result)System.out.print(item + " ");
   }
-  //Faster, still fails in the case 4
+  
+  //Faster solution.
   static int[] circularArrayRotation(int[] a, int k, int[] queries) {
     int[] store = new int[a.length];
     int[] result = new int[queries.length];
-    int temp = 0;
-    int helper = 0;
-    int newPos = 0;
-    while(k>a.length){
-      k/= a.length;
-    }
+    int calc = 0;
+    calc = k%store.length;
     for(int i=0; i<a.length; i++){
-      if(i+k+1 > a.length){
-        helper = (i+k) - a.length;
-        store[helper] = a[i];
+      if(i+1+calc> a.length){
+        store[(i+calc)-a.length] = a[i];
       }else{
-        store[i+k] = a[i];
+        store[i+calc] = a[i];
       }
     }
     for(int i=0; i<queries.length; i++){
