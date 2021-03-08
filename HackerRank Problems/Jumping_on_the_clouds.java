@@ -9,15 +9,8 @@ public class Jumping_on_the_clouds{
     int energy = 100;
     int index = 0;
     do{
-      index += k;
-      if(index >= c.length){
-        index -= c.length;
-      }
-      if(c[index] == 1){
-        energy -= 3;
-      }else{
-        energy -=1;
-      }
+      index = (index + k) % c.length;
+      energy = c[index] == 1? energy-3: energy-1;
     }while(index != 0);
     return energy;
   }
