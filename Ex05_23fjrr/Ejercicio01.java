@@ -4,8 +4,7 @@
 public class Ejercicio01{
   public static void main(String[] args){
     String[] input = {"pera", "uva", "naranja", "mango", "cereza", "lichi", "coco"};
-    //String[] input = {};
-    String[] arrResult = trozoDeArrayString(input, 4, 2);
+    String[] arrResult = trozoDeArrayString(input, 100, 200);
     for(String item: arrResult) System.out.print(item + " ");
   }
   
