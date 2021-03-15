@@ -10,11 +10,11 @@ public class Movil extends Terminal{
   public void llama(Terminal destinatario, int duracion){
     super.llama(destinatario, duracion);
     if(this.tarifa.equals("rata")){
-      this.importe += ((int)(duracion/60)) * 0.6;
+      this.importe += duracion/60 * 0.06;
     }else if(this.tarifa.equals("mono")){
-      this.importe += ((int)(duracion/60)) * 0.12;
+      this.importe += duracion/60 * 0.12;
     }else{
-      this.importe += ((int)(duracion/60)) * 0.3;
+      this.importe += duracion/60 * 0.3;
     }
   }
   
