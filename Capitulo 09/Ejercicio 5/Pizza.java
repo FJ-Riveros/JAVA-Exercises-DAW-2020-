@@ -1,6 +1,6 @@
 public class Pizza{
-  private static int pedidas;
-  private static int servidas;
+  private static int pedidas = 0;
+  private static int servidas = 0;
   private String estado;
   private String tipo;
   private String tamanio;
