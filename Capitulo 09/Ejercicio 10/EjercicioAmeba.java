@@ -6,7 +6,7 @@ public class EjercicioAmeba{
     Ameba a2 = new Ameba();
     a2.come(4);
     System.out.println(a2);
-    a1.come(a2);
+    a1.come(a2w);
     System.out.println(a1);
     System.out.println(a2);
     a2.come(3);
