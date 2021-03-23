@@ -14,18 +14,22 @@ public class TarjetaRegalo{
     return "Tarjeta nº " + this.numId + " - Saldo " + this.saldo + "$";
   }
   
-  public String gasta(float cantidad){
+  public void gasta(float cantidad){
     if(this.saldo - cantidad < 0){
-      return "No tiene suficiente saldo para gastar " + cantidad + "$";
+      System.out.println("No tiene suficiente saldo para gastar " + cantidad + "$");
     }else{
       this.saldo -= cantidad;
     }
-    return "";
   }
   
-  
+  public static int[] muestraIds(){
+    return registrosId;
+  }
   public TarjetaRegalo fusiona(TarjetaRegalo segunda){
-    return new TarjetaRegalo(this.saldo + segunda.saldo);
+    TarjetaRegalo fusionada = new TarjetaRegalo(this.saldo + segunda.saldo);
+    this.saldo = 0;
+    segunda.saldo = 0;
+    return fusionada;
   }
   
   private int creaId(){
