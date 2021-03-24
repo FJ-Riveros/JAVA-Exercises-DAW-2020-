@@ -22,6 +22,10 @@ public class Discos{
     this.autor = autor;
   }
   
+  public String getAutor(){
+    return this.autor;
+  }
+  
   public void setTitulo(String titulo){
     this.titulo = titulo;
   }
@@ -30,8 +34,16 @@ public class Discos{
     this.genero = genero;
   }
   
+  public String getGenero(){
+    return this.genero;
+  }
+  
   public void setDuracion(int duracion){
     this.duracion = duracion;
+  }
+  
+  public int getDuracion(){
+    return this.duracion;
   }
   
   public String toString(){

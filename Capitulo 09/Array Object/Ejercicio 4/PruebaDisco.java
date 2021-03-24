@@ -14,9 +14,63 @@ public class PruebaDisco{
       selectedOption = Integer.parseInt(System.console().readLine());
       switch(selectedOption){
         case 1:
-          for(int i=0; i<disco.length; i++){
-            System.out.println(disco[i]);
+          int seleccionListado = 0;
+          System.out.println("============================");
+          System.out.println("============================");
+          System.out.println("Elija el listado que desea");
+          System.out.println("1. Listado completo.");
+          System.out.println("2. Listado por autor.");
+          System.out.println("3. Listado por género.");
+          System.out.println("4. Listado rango de duracion.");
+          seleccionListado = Integer.parseInt(System.console().readLine());
+          switch( seleccionListado){
+            case 1:
+              for(int i=0; i<disco.length; i++){
+                if(!disco[i].getCodigo().equals("libre")){
+                  System.out.println(disco[i]);
+                }
+              }
+            break;
+            
+            case 2:
+              String autorBuscar = "";
+              System.out.print("Introduzca el autor: ");
+              autorBuscar = System.console().readLine();
+              for(int i=0; i<disco.length; i++){
+                if(!disco[i].getCodigo().equals("libre") && disco[i].getAutor().equals(autorBuscar)){
+                  System.out.println(disco[i]);
+                }
+              }
+            break;
+            
+            case 3:
+              String generoBuscar = "";
+              System.out.print("Introduzca el género: ");
+              generoBuscar = System.console().readLine();
+              for(int i=0; i<disco.length; i++){
+                if(!disco[i].getCodigo().equals("libre") && disco[i].getGenero().equals(generoBuscar)){
+                  System.out.println(disco[i]);
+                }
+              }
+            break;
+            
+            case 4:
+              int limiteInferior = 0;
+              int limiteSuperior = 0;
+              System.out.print("Introduzca el limite inferior de duracion: ");
+              limiteInferior = Integer.parseInt(System.console().readLine());
+              System.out.print("Introduzca el limite superior de duracion: ");
+              limiteSuperior = Integer.parseInt(System.console().readLine());
+              for(int i=0; i<disco.length; i++){
+                if(!disco[i].getCodigo().equals("libre") && disco[i].getDuracion  () >= limiteInferior && disco[i].getDuracion() <= limiteSuperior){
+                  System.out.println(disco[i]);
+                }
+              }
+            break;
+            
+            default:
           }
+          
           
         break;
         
@@ -133,4 +187,7 @@ public class PruebaDisco{
     }
     return false;
   }
+  
+  //Filtra por autor
+  
 }
