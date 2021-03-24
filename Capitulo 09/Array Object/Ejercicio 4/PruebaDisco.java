@@ -8,6 +8,7 @@ public class PruebaDisco{
     int selectedOption = 0;
     int indexDiscoBuscar = 0;
     String discoBusqueda = "";
+    String codDisco = "";
     do{
       menu();
       selectedOption = Integer.parseInt(System.console().readLine());
@@ -24,8 +25,14 @@ public class PruebaDisco{
           if(index == -1){
             System.out.println("Lo siento, no queda ningún disco libre, borre alguno");
           }else{
-            System.out.print("Introduzca el código del disco: ");
-            disco[index].setCodigo(System.console().readLine());
+            do{
+              System.out.print("Introduzca el código del disco: ");
+              codDisco = System.console().readLine();  
+              if(codDiscoUsado(disco, codDisco)){
+                System.out.println("Lo siento, ese codigo está en uso, introduzca otro.");
+              } 
+            }while(codDiscoUsado(disco, codDisco));
+            disco[index].setCodigo(codDisco);
             System.out.print("Introduzca el título del disco: ");
             disco[index].setTitulo(System.console().readLine());
             System.out.print("Introduzca el autor del disco: ");
@@ -45,8 +52,14 @@ public class PruebaDisco{
           if(indexDiscoBuscar == -1){
             System.out.println("Lo siento el disco no se ha encontrado");
           }else{
-            System.out.print("Introduzca el nuevo código del disco: ");
-            disco[indexDiscoBuscar].setCodigo(System.console().readLine());
+            do{
+              System.out.print("Introduzca el nuevo código del disco: ");
+              codDisco = System.console().readLine();  
+              if(codDiscoUsado(disco, codDisco)){
+                System.out.println("Lo siento, ese codigo está en uso, introduzca otro.");
+              } 
+            }while(codDiscoUsado(disco, codDisco));
+            disco[indexDiscoBuscar].setCodigo(codDisco);
             System.out.print("Introduzca el nuevo título del disco: ");
             disco[indexDiscoBuscar].setTitulo(System.console().readLine());
             System.out.print("Introduzca el nuevo autor del disco: ");
@@ -96,7 +109,6 @@ public class PruebaDisco{
   }
   
   //Si devuelve -1 significa que no hay ninguno libre
-  //Comprobar
   public static int indexDiscoLibre(Discos[] disco){
     int indexLibre = -1;
     do{
@@ -112,5 +124,13 @@ public class PruebaDisco{
       if(disco[i].getCodigo().equals(codDisco)) return i;
     }
     return -1;
+  }
+  
+  //Comprueba si el codigo de disco existe o no
+  private static boolean codDiscoUsado(Discos[] disco, String codigoAComprobar){
+    for(int i=0; i<disco.length; i++){
+      if(disco[i].getCodigo().equals(codigoAComprobar)) return true;
+    }
+    return false;
   }
 }
