@@ -18,6 +18,10 @@ public class Articulo{
     return this.codArticulo;
   }
   
+  public int getStock(){
+    return this.stock;
+  }
+  
   public void setPrecioCompra(double precioCompra){
     this.precioCompra = precioCompra;
   }

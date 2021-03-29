@@ -51,9 +51,14 @@ public class Gestisimal{
           if(indexMercancia != -1){
             System.out.print("Introduzca la cantidad a retirar: ");
             mercancia = Integer.parseInt(System.console().readLine());
-            if(mercancia > 0) mercancia *= -1;
-            System.out.print("Mercancia lol: " + mercancia);
-            articulos[indexMercancia].setStock(mercancia);
+            if(articulos[indexMercancia].getStock() - mercancia < 0){
+              System.out.println("Lo siento, está retirando más mercancia de la que hay");
+            }else{
+              if(mercancia > 0) mercancia *= -1;
+              System.out.print("Mercancia lol: " + mercancia);
+              articulos[indexMercancia].setStock(mercancia);
+            }
+            
           }
         break;
         
