@@ -28,11 +28,33 @@ public class Gestisimal{
         break;
         
         case 3:
-        
+          System.out.print("Introduzca el código de la mercancia  a dar de baja: ");
+          indexMercancia = buscadorCodigo(articulos, Integer.parseInt(System.console().readLine()));
+          if(indexMercancia != -1){
+            articulos[indexMercancia].setDescripcion("");
+            articulos[indexMercancia].setPrecioCompra(0f);
+            articulos[indexMercancia].setPrecioVenta(0f);
+          }else{
+            System.out.println("El código indicado no existe");
+          }
         break;
         
         case 4:
-        
+          System.out.print("Introduzca el código de la mercancia: ");
+          indexMercancia = buscadorCodigo(articulos, Integer.parseInt(System.console().readLine()));
+          if(indexMercancia != -1){
+            System.out.print("Introduzca una nueva desripción: ");
+            descripcion = System.console().readLine();
+            articulos[indexMercancia].setDescripcion(descripcion);
+            System.out.print("Introduzca un nuevo precio de compra: ");
+            precioCompra = Double.parseDouble(System.console().readLine());
+            articulos[indexMercancia].setPrecioCompra(precioCompra);
+            System.out.print("Introduzca un nuevo precio de venta: ");
+            precioVenta = Double.parseDouble(System.console().readLine());
+            articulos[indexMercancia].setPrecioVenta(precioVenta);
+          }else{
+            System.out.println("El código indicado no existe");
+          }
         break;
         
         case 5:
@@ -58,7 +80,6 @@ public class Gestisimal{
               System.out.print("Mercancia lol: " + mercancia);
               articulos[indexMercancia].setStock(mercancia);
             }
-            
           }
         break;
         

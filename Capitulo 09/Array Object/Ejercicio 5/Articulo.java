@@ -22,6 +22,9 @@ public class Articulo{
     return this.stock;
   }
   
+  public void setDescripcion(String descripcion){
+    this.descripcion = descripcion;
+  }
   public void setPrecioCompra(double precioCompra){
     this.precioCompra = precioCompra;
   }
