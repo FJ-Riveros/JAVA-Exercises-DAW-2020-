@@ -19,7 +19,7 @@ public class Ejercicio10{
     }
     System.out.println("Introduzca la palabra en español que desea traducir: ");
     String input = System.console().readLine();
-    if(diccionario.get(input) != null){
+    if(diccionario.containsKey(input)){
       System.out.print(input + ":" + diccionario.get(input));
     }else{
       System.out.println("Lo siento, no está la traducción registrada");
