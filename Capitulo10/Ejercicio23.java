@@ -32,11 +32,8 @@ public class Ejercicio23{
     Set<String> prueba = piezasActuales.keySet();
     boolean check = false;
     int random = 0;
-    /*for(Map.Entry item: numMaximo.entrySet()){
-      if(piezasActuales.get(item.getKey()) < numMaximo.get(item.getKey())){
-        
-      }
-    }*/
+    //Buscar forma de seleccionar la clave de la entrada seleccionada con el random
+    //para comprobar antes de aumentar si se pasa del límite o no.
     /*for(int i=0; i<numCapturas; i++){
       do{
         random = (int)(Math.random()*6);
