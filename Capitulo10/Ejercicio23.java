@@ -17,19 +17,18 @@ public class Ejercicio23{
     equivalencias.put("peon", 1);
     int numCapturas = (int)(Math.random()*16);
     HashMap<String, Integer> numMaximo = new HashMap<>();
-    equivalencias.put("dama", 1);
-    equivalencias.put("torre", 2);
-    equivalencias.put("alfil", 2);
-    equivalencias.put("caballo", 2);
-    equivalencias.put("peon", 8);
+    numMaximo.put("dama", 1);
+    numMaximo.put("torre", 2);
+    numMaximo.put("alfil", 2);
+    numMaximo.put("caballo", 2);
+    numMaximo.put("peon", 8);
     
     HashMap<String, Integer> piezasActuales = new HashMap<>();
-    equivalencias.put("dama", 0);
-    equivalencias.put("torre", 0);
-    equivalencias.put("alfil", 0);
-    equivalencias.put("caballo", 0);
-    equivalencias.put("peon", 0);
-    Set<String> prueba = piezasActuales.keySet();
+    piezasActuales.put("dama", 0);
+    piezasActuales.put("torre", 0);
+    piezasActuales.put("alfil", 0);
+    piezasActuales.put("caballo", 0);
+    piezasActuales.put("peon", 0);
     boolean check = false;
     int random = 0;
     //Buscar forma de seleccionar la clave de la entrada seleccionada con el random
@@ -37,13 +36,28 @@ public class Ejercicio23{
     /*for(int i=0; i<numCapturas; i++){
       do{
         random = (int)(Math.random()*6);
+        
       }while(!cumpleReglas(numMaximo, piezasActuales));
-    }*/
-  }
-  public static boolean cumpleReglas(HashMap<String, Integer> tope, HashMap<String, Integer> actual){
-    for(Map.Entry item: tope.entrySet()){
-      if(actual.get(item.getKey()) < tope.get(item.getKey())) return false;
     }
+    * */
+    ArrayList<String> claves = new ArrayList<>();
+    for(Map.Entry clave: numMaximo.entrySet()){
+      claves.add("" + clave.getKey());
+    }
+    
+    //SEguir aqui
+    for(int i=0; i<numCapturas; i++){
+      do{
+        random = (int)(Math.random()*5);
+      }while(!cumpleReglas(numMaximo, piezasActuales, claves, random));
+      piezasActuales.put(claves.get(random), piezasActuales.get(claves.get(random)) + 1);
+    }
+    
+    System.out.println(piezasActuales);
+  }
+  
+  public static boolean cumpleReglas(HashMap<String, Integer> maximo, HashMap<String, Integer> actual, ArrayList<String> claves, int random){
+    if(actual.get(claves.get(random)) + 1 > maximo.get(claves.get(random))) return false;
     return true;
   }
 }
