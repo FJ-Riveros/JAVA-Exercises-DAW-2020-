@@ -31,33 +31,40 @@ public class Ejercicio23{
     piezasActuales.put("peon", 0);
     boolean check = false;
     int random = 0;
-    //Buscar forma de seleccionar la clave de la entrada seleccionada con el random
-    //para comprobar antes de aumentar si se pasa del límite o no.
-    /*for(int i=0; i<numCapturas; i++){
-      do{
-        random = (int)(Math.random()*6);
-        
-      }while(!cumpleReglas(numMaximo, piezasActuales));
-    }
-    * */
     ArrayList<String> claves = new ArrayList<>();
     for(Map.Entry clave: numMaximo.entrySet()){
       claves.add("" + clave.getKey());
     }
     
-    //SEguir aqui
     for(int i=0; i<numCapturas; i++){
       do{
         random = (int)(Math.random()*5);
       }while(!cumpleReglas(numMaximo, piezasActuales, claves, random));
       piezasActuales.put(claves.get(random), piezasActuales.get(claves.get(random)) + 1);
     }
-    
-    System.out.println(piezasActuales);
+    //System.out.println(piezasActuales);
+    System.out.println(muestraResultado(equivalencias, piezasActuales));
   }
   
+  
+  //This function checks if the rules are compromised or not.
   public static boolean cumpleReglas(HashMap<String, Integer> maximo, HashMap<String, Integer> actual, ArrayList<String> claves, int random){
     if(actual.get(claves.get(random)) + 1 > maximo.get(claves.get(random))) return false;
     return true;
+  }
+  
+  public static String muestraResultado(HashMap<String, Integer> equivalencias, HashMap<String, Integer> actuales){
+    int totales = 0;
+    String result = "";
+    result += "Alfil (" + (actuales.get("alfil") * equivalencias.get("alfil")) + " peones)\n";
+    result += "Caballo (" + (actuales.get("caballo") * equivalencias.get("caballo")) + " peones)\n";
+    result += "Peón (" + (actuales.get("peon") * equivalencias.get("peon")) + " peones)\n";
+    result += "Torre (" + (actuales.get("torre") * equivalencias.get("torre")) + " peones)\n";
+    result += "Dama (" + (actuales.get("dama") * equivalencias.get("dama")) + " peones)\n";
+    for(Map.Entry pares: actuales.entrySet()){
+      totales += equivalencias.get(pares.getKey()) * (int)pares.getValue();
+    }
+    result += "Puntos totales: " + totales + " peones.";
+    return result;
   }
 }
