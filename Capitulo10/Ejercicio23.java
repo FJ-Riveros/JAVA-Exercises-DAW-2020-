@@ -42,7 +42,6 @@ public class Ejercicio23{
       }while(!cumpleReglas(numMaximo, piezasActuales, claves, random));
       piezasActuales.put(claves.get(random), piezasActuales.get(claves.get(random)) + 1);
     }
-    //System.out.println(piezasActuales);
     System.out.println(muestraResultado(equivalencias, piezasActuales));
   }
   
