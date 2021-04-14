@@ -13,7 +13,9 @@ public class PruebaLecturaFichero{
         texto += linea + "\n";
         linea = lectura.readLine();
       }
+      lectura.close();
 	  System.out.println(texto);
+    
     }catch(FileNotFoundException prueba){
       System.out.println("El fichero no se encuentra");
     }catch(IOException ioe){
