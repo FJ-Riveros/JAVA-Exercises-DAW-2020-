@@ -13,7 +13,7 @@ public class quita_comentarios{
         String linea = "";
         while(linea != null){
           linea = lectura.readLine();
-          linea.replace("//", " ");
+          linea.replace('/', ' ');
           escritura.write(linea + "\n");
         }
         lectura.close();
