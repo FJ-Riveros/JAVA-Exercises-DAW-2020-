@@ -38,10 +38,7 @@
             out.print("</tr>");
           }
         }
-        
       %>
-      
-      
     </table>
   </body>
 </html>
