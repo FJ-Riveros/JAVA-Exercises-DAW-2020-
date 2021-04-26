@@ -16,10 +16,10 @@
       int altura = Integer.valueOf(request.getParameter("alturaPiramide"));
       for(int j=0; j<altura; j++){
         for(int i=0; i<altura-j-1; i++){
-          out.print("<img src=\"blanco.png\" width=\"40px\" height=\"auto\"> ");
+          out.print("<img src=\"images/blanco.png\" width=\"40px\" height=\"auto\"> ");
         }
         for(int x=0; x<(j*2)+1; x++){
-          out.print("<img src=\"ladrillo.jpg\" width=\"40px\" height=\"auto\"> ");
+          out.print("<img src=\"images/ladrillo.jpg\" width=\"40px\" height=\"auto\"> ");
         }
         out.print("<br>");
       }
